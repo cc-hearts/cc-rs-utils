@@ -17,7 +17,7 @@ favicon:
 # 用户头像与昵称
 avatar:
   author_photo: /images/avatar.png
-  author_nickname: Heart的摸鱼笔记
+  author_nickname: heart's Blog
   path: /
 
 # 文章末尾的上一页与下一页
