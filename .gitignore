@@ -11,3 +11,4 @@ _multiconfig.yml
 package-lock.json
 *.backup
 .obsidian
+.vscode
