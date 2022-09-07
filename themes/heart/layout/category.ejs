@@ -1,8 +1,33 @@
 <div class="container category">
-  <!-- TODO: category -->
-  <%
-  console.log(site.posts)
-  // console.log(page)
-  %>
-    123
+  <div class="post-list">
+    <% site.categories.each(function(item, index) { %>
+      <div class="content-title">
+        <h2>
+          <span>
+            <%- item.name %>
+          </span>
+        </h2>
+      </div>
+      <% item.posts.each(function(record,index) { %>
+        <div>
+          <div class="post-item" title="<%- record.title %>">
+            <div class="time-m-d">
+              <%- record.date.format("MM-DD") %>
+            </div>
+            <div class="title">
+              <a href="<%- url_for(record.path) %>">
+                <% if(record.title !=="" ) { %>
+                  <span>
+                    <%- record.title %>
+                  </span>
+                  <% } else { %>
+                    <span>untitled</span>
+                    <% } %>
+              </a>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+          <% }) %>
+  </div>
 </div>

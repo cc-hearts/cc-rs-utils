@@ -1,5 +1,6 @@
 ---
 title: Linux 基础
+categories: Linux
 ---
 
 ## 目录结构
@@ -195,9 +196,7 @@ groupadd <用户组名称>
 groupmod -g <用户组> <用户名>
 ```
 
-
 ## 用户和组的配置文件
-
 
 ```shell
 /etc/passwd #用户配置文件 记录用户的信心
@@ -221,11 +220,14 @@ groupmod -g <用户组> <用户名>
 ```
 
 ## 指令
+
 系统的运行级别配置文件: `/etc/inittab`
-切换到指定运行级别的指令: 
+切换到指定运行级别的指令:
+
 ```shell
 init [0 | 1 | 2 | 3 | 5 | 6]
 ```
+
 > 运行级别
 > 0 关机
 > 1 单用户（找回丢失密码）
@@ -236,6 +238,7 @@ init [0 | 1 | 2 | 3 | 5 | 6]
 > 6 系统重启
 
 ### 帮助指令
+
 ```shell
 # man [命令或配置文件] # 获得帮助信息
 
@@ -245,33 +248,38 @@ man help
 ```
 
 ```shell
-help [命令] # 获取shell 内置的命令的信息 
+help [命令] # 获取shell 内置的命令的信息
 ```
+
 ### 文件目录指令
+
 ```shell
 pwd #显示当前工作目录的绝对路径
 ```
 
-#### ls指令
+#### ls 指令
+
 ```shell
 ls [选项] [目录或者文件]
 
 # -a 显示当前目录所有文件和目录 包括隐藏的
 # -l 以列表的方式显示信息
 
-ls -l 
+ls -l
 ls -a
 ls -la
 ```
 
 #### cd 指令
+
 ```shell
-cd 
-cd ~ 
+cd
+cd ~
 # 都是回到家目录下面
 ```
 
 #### mkdir 指令
+
 ```shell
 mkdir /home/tmpFile # 在home目录下面创建 tmpFile 目录
 
@@ -279,6 +287,7 @@ mkdir -p /home/animal/snake # -p 可以创建多级目录
 
 # mkdir -p /home/animal/snake 在 home的下创建了多级目录 animal/snake
 ```
+
 > 删除目录:
 
 ```shell
@@ -289,6 +298,7 @@ rm -rf ./[文件目录/文件名]
 ```
 
 #### touch 指令
+
 ```shell
 touch [文件名] [文件名] ... # 可以一次性创建多个文件
 ```

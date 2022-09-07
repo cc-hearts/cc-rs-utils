@@ -1,5 +1,6 @@
 ---
 title: sticky的使用
+categories: CSS
 ---
 
 ```css
