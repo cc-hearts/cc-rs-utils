@@ -1,5 +1,6 @@
 ---
 title: oh-my-zsh 及插件
+categories: Mac
 ---
 
 安装：oh-my-zsh

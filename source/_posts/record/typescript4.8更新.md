@@ -1,6 +1,6 @@
 ---
 title: 'typescript 4.8 更新'
-categories: typescript
+categories: Typescript
 ---
 
 ## 支持 {} | undefined | null 分配给 unknown
