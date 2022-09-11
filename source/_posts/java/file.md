@@ -384,11 +384,12 @@ while((str=reader.readLine())!=null){
 	writer.writer(str);
 	// 可以使用newLine()换行
 	writer.newLine();
-	
+
 }
 ```
 
 ### 图片加解密
+
 ```java
 @Test
     public void secretTest() {
@@ -417,7 +418,9 @@ while((str=reader.readLine())!=null){
 	}
 }
 ```
+
 解密：
+
 ```java
 @Test
     public void decode() {
@@ -446,3 +449,188 @@ while((str=reader.readLine())!=null){
 	}
 }
 ```
+
+### 转换流
+
+- 输入转换流: InputStreamReader 字符输入流
+- 输出转换流: OutputStramWriter 字符输出流
+
+```java
+/**
+ * InputStreamReader 输入转换流 将一个字节的输入流转换为字符的输入流
+ * OutputStreamWriter 输出转换流
+ */
+@Test
+public void InputStreamReaderTest() {
+    InputStreamReader isr = null;
+    OutputStreamWriter ior = null;
+    try {
+        FileInputStream fis = new FileInputStream("src/file/base-file.txt");
+        FileOutputStream fos = new FileOutputStream("src/file/base1-file.txt");
+        // 第二个参数代表使用什么编码方式去读取流  可以指定过得方式有 'UTF-8' 'GBK'        isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
+        // 以gbk的编码形式写入
+        ior = new OutputStreamWriter(fos, "GBK");
+        int len = 0;
+        while ((len = isr.read()) != -1) {
+            ior.write(len);
+        }
+    } catch (Error | FileNotFoundException e) {
+        e.printStackTrace();
+    } catch (IOException e) {
+        throw new RuntimeException(e);
+    } finally {
+        try {
+            if (isr != null) isr.close();
+            if (ior != null) ior.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+- ASCII 英国标准信息交换码
+- ISO08859-1 拉丁码表
+- GB2312 中国的中文编码表
+- GBK (ANSI) 中文编码表的升级
+- Unicode
+- UTF-8
+
+> Unicode 不完美，这里就有三个问题，一个是，我们已经知道，英文字母只用
+> 一个字节表示就够了，第二个问题是如何才能区别 Unicode 和 ASCII？计算机
+> 怎么知道两个字节表示一个符号，而不是分别表示两个符号呢？第三个，如果
+> 和 GBK 等双字节编码方式一样，用最高位是 1 或 0 表示两个字节和一个字节，
+> 就少了很多值无法用于表示字符，不够表示所有字符。Unicode 在很长一段时
+> 间内无法推广，直到互联网的出现。
+> 面向传输的众多 UTF(UCS Transfer Format)标准出现了，顾名思义，UTF
+> 8 就是每次 8 个位传输数据，而 UTF-16 就是每次 16 个位。这是为传输而设计的
+> 编码，并使编码无国界，这样就可以显示全世界上所有文化的字符了。
+> Unicode 只是定义了一个庞大的、全球通用的字符集，并为每个字符规定了唯
+> 确定的编号，具体存情减什么样的字节流，取决于字符编码方案。推荐的
+> Unicode 编码是 UTF-8 和 UTF-16。
+
+**Unicode 符号范围 IUTF-8 编码方式**
+(十六进制) | (二进制)
+
+> 0 表示只有 1 个字符存储
+
+    00000000-0000007F | 0 KXXXXXX(兼容原来的ASCI)
+
+> 110 表示的是 2 字符存储
+
+    00000080-000007FF | 110 XXXXX10 KXXXXX
+
+> 1110 表示的是 3 个字符存储
+
+    0000 0800-0000 FFFF |  1110xxxx 10xxxxxx 10xxxxxx
+
+> 11110 表示 4 个字符存储
+
+    0001 0000-0010 FFFF |  11110xxx 10xxxxxx10xxxxxx 10xxxxxx
+
+### 标准输入、输出流
+
+System.in 标准的输入流 默认从键盘输入 类型是 InputStrean
+System.out 标准的输出流 默认从控制台输出 类型是 PrintStream 但是他是 OutputStream 的子类
+
+System.setIn System.setOut 方式可以重新指定输入和输出的流
+
+```java
+public static void setIn(InputStream in)
+public static void setOut(PrintStream out)
+```
+
+#### 数据读取一行
+
+> Scanner 操作
+
+```java
+/**
+ * 读取一行数据的操作
+ */
+@Test
+public void ScannerRead() {
+    // System.in 代表从键盘读入
+    Scanner scanner = new Scanner(System.in);
+    String str = "";
+    while (true) {
+        str = scanner.next();
+        if ("e".equals(str) || "exit".equals(str)) break;
+        System.out.println(str);
+    }
+    scanner.close();
+}
+```
+
+> InputStreamReader 操作
+
+```java
+@Test
+public void InputStreamReaderTest() {
+    InputStreamReader isr = new InputStreamReader(System.in);
+    BufferedReader bf = new BufferedReader(isr);
+    String str = "";
+    try {
+        while (true) {
+            str = bf.readLine();
+            // 更好避免空指针的问题
+            if ("e".equals(str) || "exit".equals(str)) break;
+            System.out.println(str);
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    } finally {
+        try {
+            bf.close();
+            isr.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### 打印流
+
+- System.out.println
+- PrintStream
+
+### 数据流
+
+- DataInputStream
+- DataOutputStream
+  > 读取的顺序需要与写入的顺序一致
+
+### 对象流
+
+- ObjectInputStream 输入流
+- ObjectOutputStream 输出流
+  > 不能序列化`static` 和 `transient` 修饰的成员变量
+  > 序列化： 将 JAVA 对象转换成与平台无关的二进制流
+
+### Serializable
+
+> 如果序列化一个对象 需要这个类实现 Serializable 接口 还需要声明 serivalVersionUID
+
+```java
+// 序列版本号
+public static final long serivalVersionUID = 142L;
+```
+
+凡是实现 Serializable 接口的类都有一个表示序列化版木标识符的静态变量：
+
+> private static final long serialVersionUlD;
+> serialVersionUID 用来表明类的不同版本间的兼容性。简言之，其目的是以序列化对象
+> 进行版本控制，有关各版本反序列化时是否兼容。
+> 如果类没有显示定义这个静态常量，它的值是 Java 运行时环境根据类的内部细节自
+> 动生成的。若类的实例变量做了修改，serialVersionUID 可能发生变化。故建议，
+> 显式声明。
+> 简单来说，Java 的序列化机制是通过在运行时判断类的 serialVersionUID 来验
+> 证版木一致性的。在进行反序列化时，JVM 会把传来的字节流中的
+> serialVersionUID 与木地相应实体类的 serialVersionUID 进行比较，如果相同
+> 就认为是一致的，可以进行反序列化，否则就会出现序列化版木不一致的异
+> 常。(InvalidCastException)
+
+#### RandomAccessFile 类
+
+可以作为输入流 也可以作为输出流
