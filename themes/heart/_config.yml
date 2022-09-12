@@ -37,19 +37,19 @@ link:
   - name: tag
     icon: tags
     path: /categories/
+  - name: case
+    icon: edit
+    path: /cases/
   - name: github
     icon: github
     path: https://github.com/Hearpro
     target: _blank
-  - name: email
-    icon: envelope
-    path:
-  - # rss需安装 hexo-generator-feed 插件
-    # 具体参照https://github.com/hexojs/hexo-generator-feed
-    name: rss
-    icon: rss
-    path: /atom.xml
-    target: _blank
+  # - # rss需安装 hexo-generator-feed 插件
+  #   # 具体参照https://github.com/hexojs/hexo-generator-feed
+  #   name: rss
+  #   icon: rss
+  #   path: /atom.xml
+  #   target: _blank
 
 # 页脚信息
 footer:

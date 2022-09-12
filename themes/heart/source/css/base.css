@@ -142,6 +142,7 @@ a:hover {
 .category-details .time-m-d,
 .category .time-m-d {
   margin: 0 30px;
+  width: 52px;
 }
 
 .avatar {
@@ -249,7 +250,7 @@ a:hover {
 }
 
 .footer {
-  padding-top: 15px;
+  padding-bottom: 15px;
   font-size: 1.2rem;
   color: #aaa;
 }
