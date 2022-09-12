@@ -35,6 +35,8 @@ categories: Config
 
   "editor.wordWrapColumn": 150, // 单词换行
 
+  "editor.lineHeight": 25, // 编辑器行高
+
   "files.trimTrailingWhitespace": true // 保存文件时候删除行尾的空格
 }
 ```
