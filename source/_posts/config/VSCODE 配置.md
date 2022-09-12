@@ -21,6 +21,10 @@ categories: Config
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // vue 默认格式化
+  },
+
   "editor.formatOnSave": true, // 保存之后是否格式化
 
   "editor.tabSize": 2, // tab缩进
@@ -37,7 +41,9 @@ categories: Config
 
   "editor.lineHeight": 25, // 编辑器行高
 
-  "files.trimTrailingWhitespace": true // 保存文件时候删除行尾的空格
+  "files.trimTrailingWhitespace": true, // 保存文件时候删除行尾的空格
+
+  "workbench.iconTheme": "material-icon-theme" // 主题文件夹
 }
 ```
 
@@ -107,6 +113,9 @@ categories: Config
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "merge-conflict.autoNavigateNextConflict.enabled": true,
@@ -114,6 +123,7 @@ categories: Config
   "files.autoSaveDelay": 5000,
   "editor.bracketPairColorization.enabled": true,
   "editor.wordWrapColumn": 150,
+  "editor.lineHeight": 25,
   "files.trimTrailingWhitespace": true,
   "workbench.iconTheme": "material-icon-theme"
 }
