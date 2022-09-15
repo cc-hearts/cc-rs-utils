@@ -1,0 +1,72 @@
+.main {
+  max-width: 1200px;
+}
+
+.repository-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.repository-card {
+  width: 360px;
+  height: 150px;
+  border: 1px solid #f2f2f2;
+  margin: 20px 0;
+  padding: 6px 12px;
+  position: relative;
+  transition: all 0.3s ease-in;
+}
+
+.repository-card:hover {
+  transform: translate(0, -3px);
+}
+
+.repository-card:hover::before {
+  transform: scale(0);
+}
+
+.repository-card::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: calc(100% + 2px);
+  left: -1px;
+  top: -1px;
+  background-color: var(--bgc, #f0f0f0);
+  transform: scale(1);
+  transition: all 0.3s ease-in;
+}
+
+.repository-card + .repository-card {
+  margin: 20px 10px;
+}
+.repository-card h3 {
+  margin: 12px 0;
+}
+.repository-card h3 > a {
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.repository-card h3 > a:hover {
+  color: #2196f3;
+}
+.repository-description {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  min-height: 48px;
+}
+.repository-footer {
+  display: flex;
+}
+.repository-tags {
+  display: inline-block;
+  color: var(--color);
+  font-size: 14px;
+}
+.repository-tags + .repository-tags {
+  margin: 0 6px;
+}

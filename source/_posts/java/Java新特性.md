@@ -27,3 +27,24 @@ public class lambda {
 ```
 
 ## 方法引用
+传递给Lambda体的操作 已经有实现的方法了 则可以使用方法引用
+本质上也是Lambda表达式 而Lambda表达式作为函数式接口的实例 所以方法引用 也是函数式接口的实例
+> 使用格式 :
+>  类(或 对象) :: 方法名
+>  1. 对象  ::非静态方法
+>  2. 类 :: 静态方法
+>  3. 类 :: 非静态方法
+```java
+public class lambda {  
+    // lambda 表达式  
+    public static void main(String[] args) {  
+        MathOperation mathOperation = (int a, int b) -> a - b;  
+  
+        MathOperation mathOperation1 = lambda::add;  
+    }  
+  
+    public static int add(int a, int b) {  
+        return a - b;  
+    }  
+}
+```

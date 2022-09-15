@@ -4,11 +4,9 @@
 <!-- now: 当前遍历到的文章的发布年份 -->
 
 <div class="container archives">
-  <div class="post-list">
     <%
       var prev = -10086;// prev year
       var curr;// curr year, ever step be updated
-
       site.posts.sort('date', -1).each(function(item, index) {
         curr = item.date.year()
         if (curr !== prev) {
@@ -23,7 +21,8 @@
       <%
         }
       %>
-      <div class="post-item" title="<%- item.title %>">
+      <div class="post-list">
+      <div class="post-item  <%- index === site.posts.length - 1 ? 'post-last' : '' %>" title="<%- item.title %>">
         <div class="time-m-d"><%- item.date.format("MM-DD") %></div>
         <div class="title">
           <a href="<%- url_for(item.path) %>">
@@ -35,8 +34,8 @@
           </a>
         </div>
       </div>
+  </div>
     <%
       });
     %>
-  </div>
 </div>

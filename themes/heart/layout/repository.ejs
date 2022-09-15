@@ -1,0 +1,42 @@
+
+<div class="repository">
+  <!-- TODO: 待开发 -->
+  <h1 class="repository-title">
+    Repositories
+  </h1>
+  <div class="repository-content">
+    <% function randomColor() {
+      var r = ~~(Math.random() * 250);
+      var g = ~~(Math.random() * 250);
+      var b = ~~(Math.random() * 250);
+      return "rgb(" + r + "," + g + "," + b + ")";
+    }
+    %>
+    <% for(let item of theme.repository){ %>
+      <div class="repository-card" style="--bgc:<%- randomColor() %>">
+       <h3>
+          <a href="<%- url_for(item.path) %>"><%- item.name %></a>
+       </h3>
+       <p class="repository-description">
+        <%- item.description %>
+       </p>
+       <div class="repository-footer">
+        <% if (item.tags) {
+          const tagsList = item.tags.split('、')
+          for(let record of tagsList) {
+          %>
+          <span class="repository-tags" style="--color:<%- randomColor() %>">
+            <%- record %>
+          </span>
+          <% } %>
+        <% } %>
+       </div>
+      </div>
+    <% } %>
+</div>
+
+</div>
+
+<%- css(['/css/repo.css']) %>
+
+

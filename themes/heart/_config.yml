@@ -39,7 +39,7 @@ link:
     path: /categories/
   - name: case
     icon: edit
-    path: /cases/
+    path: /repository/
   - name: github
     icon: github
     path: https://github.com/Hearpro
@@ -60,3 +60,13 @@ footer:
 search:
   enable: true
   placeholder: 搜索
+
+# repo项目组
+repository:
+  # name: 名称
+  # description: 描述方式
+  # path: repo url
+  - name: Phrase Generator
+    description: 词条生成器
+    path: https://github.com/Hearpro/PhraseGenerator
+    tags: JavaScript、NodeJs

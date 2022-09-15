@@ -10,7 +10,7 @@
       </div>
       <% item.posts.each(function(record,index) { %>
         <div>
-          <div class="post-item" title="<%- record.title %>">
+          <div class="post-item <%- index === item.posts.length - 1 ? 'post-last' : ''  %>" title="<%- record.title %>">
             <div class="time-m-d">
               <%- record.date.format("MM-DD") %>
             </div>
