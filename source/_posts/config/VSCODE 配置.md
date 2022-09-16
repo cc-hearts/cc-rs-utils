@@ -104,27 +104,53 @@ categories: Config
 ```json
 {
   "explorer.compactFolders": false,
+
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
   "editor.formatOnSave": true,
+
   "editor.tabSize": 2,
+
   "merge-conflict.autoNavigateNextConflict.enabled": true,
+
   "files.autoSave": "afterDelay",
+
   "files.autoSaveDelay": 5000,
+
   "editor.bracketPairColorization.enabled": true,
+
   "editor.wordWrapColumn": 150,
+
   "editor.lineHeight": 25,
+
   "files.trimTrailingWhitespace": true,
+
   "workbench.iconTheme": "material-icon-theme"
 }
 ```

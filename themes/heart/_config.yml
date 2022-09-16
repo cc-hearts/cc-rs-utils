@@ -70,3 +70,7 @@ repository:
     description: 词条生成器
     path: https://github.com/Hearpro/PhraseGenerator
     tags: JavaScript、NodeJs
+  - name: alCode
+    description: Algorithm code repository
+    path: https://github.com/Hearpro/alCode
+    tags: Typescript、Java、Go
