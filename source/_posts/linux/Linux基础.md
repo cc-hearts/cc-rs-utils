@@ -268,6 +268,7 @@ ls [选项] [目录或者文件]
 ls -l
 ls -a
 ls -la
+ls -lh # 输出人类看懂的展示
 ```
 
 #### cd 指令
@@ -304,3 +305,253 @@ touch [文件名] [文件名] ... # 可以一次性创建多个文件
 ```
 
 #### cp 指令
+
+```shell
+cp [选项] source dest  # 拷贝文件需要加-r
+-r 递归复制整个文件
+\cp -r source dest # 强制覆盖
+```
+
+#### rm 指令
+
+移除文件目录
+
+```shell
+rm [选项] 要删除的文件或者目录
+
+-r递归删除
+-f 强制删除不提示
+```
+
+#### mv 指令
+
+重命名或者移动文件目录
+
+```shell
+mv oldName newName # 重命名
+
+mv /tmp/moveFile /tmp # 移动文件
+```
+
+#### cat 指令
+
+`cat` 指令查看文件的内容 `cat`以只读的方式打开
+
+```shell
+cat [选项] 要查看的文件
+
+-n 显示行号
+
+cat -n/etc/profile | more #分页显示
+
+# 分页之后的操作：
+
+# space 往后翻页
+
+# enter 向下一行
+
+# q 离开more状态
+
+# ctrl + F 向下滚动一屏
+
+# ctrl + B 返回上一屏
+
+# = 输出当前的行号
+
+# :f  输出文件名和当前行的行号
+```
+
+#### less 指令
+
+less 指令用来分屏查看文件的内容 其功能 与 more 相似 但是比 more 的指令更加强大 他能够按需加载内容
+
+> 推荐大型文件使用 less 命令查看
+
+#### > 指令 和 >> 指令
+
+输入重定向或者追加
+
+```shell
+> 指令 覆盖
+>> 指令追加
+
+
+ls -l > a.txt # 将列表的描述文件写入到 a.txt中
+
+# 用例：
+cat /etc/profile > a.txt
+
+echo hello > a.txt
+```
+
+#### echo 指令
+
+输出环境变量到控制台
+
+```shell
+echo $PATH
+```
+
+#### head 指令
+
+显示文件的开头部分的内容 默认显示的是前 10 行的内容
+
+```shell
+head aaaa.txt
+head aaaa.txt -n 5 # 显示前5行的内容
+```
+
+#### tail 指令
+
+tail 用于输出文件中尾部的内容 默认情况下显示文件的后 10 行内容
+
+```shell
+tail 文件
+
+tail -n 5 文件
+
+tail -f 文件 # 实时追踪该文档的所有更新 有变化就会显示在终端上 比较常用
+```
+
+#### ln 指令
+
+类似于 windows 的快捷方式 创建一个软连接的方式 主要存放了连接其他文件的路径
+
+```shell
+ln -s [原文件或目录] [软连接名]
+ln -s /tmp/detail mydetail
+
+# 进入软连接后 使用pwd 还是看到的是当前的目录 不是软链接指向的目录
+```
+
+#### history 指令
+
+查看已经执行过的历史指令 也可以执行历史指令
+
+```shell
+history 10 # 显示最近的10条历史指令
+
+# 执行历史指令
+
+!233 # 233是历史指令的前面的编号 可以使用history 查看
+```
+
+### 时间日期类
+
+#### date 指令 显示当前日期
+
+```shell
+date # 显示当前的时间
+
+date +%Y 显示当前年份
+date +%m 显示月份
+date +%d 显示当前是哪一天
+
+date "+%Y-%m-%d %H:%M:%S" #显示年月日时分秒
+```
+
+##### 设置系统时间
+
+```shell
+date -s "2018-01-01 12:12:12"
+```
+
+#### cal 指令 显示当前的日历
+
+```shell
+cal # 显示当前的日历
+
+cal 2020 #显示2020年的日历
+```
+
+### 查找指令
+
+#### find 指令
+
+find 指令将从指定的目录乡下递归的遍历其各个子目录 将满足条件的文件或者目录显示在终端
+
+```shell
+
+find [搜索范围] [选项]
+
+find /home d.txt
+
+
+# 选项说明
+# -name <查询方式> 按照指定的文件名查找模式查找文件
+find -name a.txt
+
+find -name *.txt
+# -user <用户名> 查找属于指定用户名的所有文件
+find /etc -user root
+# -size <文件大小> 按照指定的文件大小查找文件
+find -size +20M # 查找文件大于20M
+# +n 大于 -n小于 n等于
+```
+
+#### locate 指令
+
+locate 指令可以快速定位文件的路径 使用之前需要使用`updatedb` 创建`locate`数据库
+
+#### grep 过滤查找
+
+grep 可以过滤查找数据
+管道符 `|` 表示将前一个命令的处理结果输出传递给后面的命令处理
+
+```shell
+grep [选项] 查找内容 源文件
+
+grep -n aa hello.txt
+# 常用选项
+-n 显示匹配行以及行号
+-i 忽略字母大小写
+
+# 也可以使用管道符操作
+cat hello.txt | grep -n aa # 显示hello.txt中包含aa的行
+```
+
+### 压缩指令
+
+#### gzip 指令
+
+```shell
+gzip 文件 # 将文件压缩成.gz文件 压缩完成后 原先的文件会被删除
+gunzip 文件.gz # 解压缩文件
+```
+
+#### zip 指令
+
+```shell
+zip [选项] <xxx.zip> <path>
+
+zip -r package.zip /home/ # 将home目录文件压缩到 package.zip中
+
+# -r 递归压缩目录
+unzip [选项] xxx.zip
+
+
+unzip -d /opt/tmp package.zip # 解压到指令的文件夹中
+```
+
+#### 打包指令
+
+tar 指令 打包指令 打包过后的文件是.tar.gz 的文件
+
+```shell
+tar [选项] xxx.tar.gz <打包的内容>
+
+# -c 产生 .tar打包文件
+# -v 显示详细信息
+# -f 指定压缩后的文件名
+# -z 打包同时压缩
+
+tar -zcvf package.tar.gz a.txt b.txt # 将 a.txt b.txt压缩
+
+tar -zcvf package.tar.gz aaaa.txt hello.tx
+
+tar -zcvf pack.tar.gz /tmp/ # 打包tmp下面的所有文件
+# -x 解包.tar文件
+tar -zxvf package.tar.gz # 解压到当前的目录
+
+tar -zxvf package.tar.gz -C /opt # 解压到指定的目录下 目录需要事先存在
+```
