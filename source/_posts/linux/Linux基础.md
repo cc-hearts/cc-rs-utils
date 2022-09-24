@@ -555,3 +555,7 @@ tar -zxvf package.tar.gz # 解压到当前的目录
 
 tar -zxvf package.tar.gz -C /opt # 解压到指定的目录下 目录需要事先存在
 ```
+
+## 
+- ps -ef
+- df -h
