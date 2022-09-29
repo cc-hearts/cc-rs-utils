@@ -1,6 +1,6 @@
 ---
-title:v-on的基本使用
-categories: Vue
+title: v-on的基本使用
+categories: Uni-app
 ---
 
 ## on 监听多个方法
