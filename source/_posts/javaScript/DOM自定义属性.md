@@ -1,5 +1,6 @@
 ---
 title: 自定义属性 data-*
+categories: JavaScript
 ---
 
 ## 概述

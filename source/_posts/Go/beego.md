@@ -1,0 +1,4 @@
+---
+title: beego
+categories: Go
+---

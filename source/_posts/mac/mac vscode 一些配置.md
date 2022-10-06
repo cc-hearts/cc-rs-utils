@@ -13,10 +13,10 @@ categories: Mac
    4. 填入相关的 shell 脚本的指令
 
 ```bash
-		for f in "$@"
-		do
-			echo "$f"
-			cd "$f"
-			/usr/local/bin/code
-		done
+  for f in "$@"
+  do
+   echo "$f"
+   cd "$f"
+   /usr/local/bin/code
+  done
 ```

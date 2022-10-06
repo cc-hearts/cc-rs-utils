@@ -33,6 +33,10 @@ git commit --amend -m "修补最后一次提交记录的信息"
 git rebase -i [startPoint] [endPoint]
 ```
 
+之后将提交的`commit`的`pick ` 改成
+
+`rewrite` 并且修改`commit ` 信息即可
+
 ## git rebase分支合并
 
 > 变基只适合在本地操作，如果记录已经推到了远程仓库，那么就不能再执行变基操作 否则 多人开发代码结构会混乱不堪
@@ -44,3 +48,12 @@ git rebase master # 将当前的分支 变基到 master分支
 # 之后 切换到 master 合并这个分支即可
 git merge top # 此时的分支就会是一条线
 ```
+
+## git 删除缓存
+
+```shell
+git rm -r --cached . 
+git add . 
+git commit -m 'new message'
+```
+

@@ -100,6 +100,42 @@ sourceMaps:
  }
 ```
 
+## vue-cli 创建vue2调试
+> 需要修改` vue.config.js `中的 `devtools` 为 `source-map`
+
+```js
+  configureWebpack: (config) => {
+    config.devtool = "source-map";
+  },
+```
+ launch.json 配置:
+```json
+  "configurations": [
+    {
+      "name": "Attach to Chrome",
+      "port": 9222,
+      "request": "attach",
+      "type": "chrome",
+      "webRoot": "${workspaceFolder}",
+      "sourceMapPathOverrides": {
+        "webpack://vue2-test/src/*": "${workspaceFolder}/src/*"
+      }
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "vuejs: chrome",
+      "runtimeExecutable": "canary",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}/src",
+      "sourceMapPathOverrides": {
+        "webpack://vue2-test/src/*": "${webRoot}/*"
+      }
+    }
+  ]
+```
+> vue2 vs code调试: 
+> https://v2.cn.vuejs.org/v2/cookbook/debugging-in-vscode.html
 ## 参考资料
 
 chrome浏览器启动参数配置:
@@ -109,3 +145,6 @@ chrome浏览器启动参数配置:
 远程调试技术介绍:
 
 - <https://fed.taobao.org/blog/taofed/do71ct/chrome-remote-debugging-technics/>
+
+- source-map 映射介绍
+- https://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html
