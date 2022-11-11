@@ -3,23 +3,23 @@ title: 约束constraint
 url: https://www.yuque.com/u21419265/ak1tzo/nrdipi
 ---
 
-<a name="GJzaD"></a>
+
 
 # 约束
 
-![image.png](../../assets/mysql/nrdipi/1647233661046-c6be2b05-1b2b-4a37-b46f-bf3f1ff351df.png) <a name="Ii9N3"></a>
+![image.png](../../assets/mysql/nrdipi/1647233661046-c6be2b05-1b2b-4a37-b46f-bf3f1ff351df.png)
 
 # 约束的作用范围
 
-<a name="AtRiT"></a>
+
 
 ## 列级约束
 
-将此约束声明在对应的字段的后面 <a name="F07hW"></a>
+将此约束声明在对应的字段的后面
 
 ## 表级约束
 
-在表中的所有字段都声明完 在所有字段的声明的后面添加约束 <a name="rZXRs"></a>
+在表中的所有字段都声明完 在所有字段的声明的后面添加约束
 
 # 约束的作用
 
@@ -28,12 +28,12 @@ url: https://www.yuque.com/u21419265/ak1tzo/nrdipi
 - primary key 主键约束
 - foreign key 外键约束
 - check 检查约束
-- default 默认值约束 <a name="IWYGW"></a>
+- default 默认值约束
 
 # 添加约束
 
 create table时添加约束
-alter table 时增加约束 删除约束 <a name="c9nC8"></a>
+alter table 时增加约束 删除约束
 
 ### 查看约束
 
@@ -57,7 +57,7 @@ modify `is` varchar(255) null ;
 ![image.png](../../assets/mysql/nrdipi/1647235205055-1af805f0-4cd7-424c-8a68-5aea004d9c23.png)
 
 ![image.png](../../assets/mysql/nrdipi/1647237826576-a5b81bfe-143a-4d87-9d79-9cd9283538ef.png)
-可以向声明unique的字段上添加null值 而且可以多次添加null值 <a name="QWCCR"></a>
+可以向声明unique的字段上添加null值 而且可以多次添加null值
 
 ## 表级约束
 
@@ -83,7 +83,7 @@ alter table tes2
 modify last_name varchar(15) unique;
 ```
 
-<a name="nHShO"></a>
+
 
 # 删除唯一性的约束
 
@@ -101,7 +101,7 @@ drop index uk;
 
 > 可以通过show index from 表名称 查看表的索引
 
-<a name="ctY5y"></a>
+
 
 # 主键约束
 
@@ -133,7 +133,7 @@ alter table test3
 drop primary key;
 ```
 
-<a name="jE4FQ"></a>
+
 
 # 子增列
 
@@ -163,7 +163,7 @@ alter table d
 modify id;
 ```
 
-唯一键和主键都是通过删除唯一索引和主索引来删除的 所有用的搜时drop 而修改类型用的是modify <a name="MTuGZ"></a>
+唯一键和主键都是通过删除唯一索引和主索引来删除的 所有用的搜时drop 而修改类型用的是modify
 
 # sql5.7在内存中维护了一个auto\_increment
 
@@ -173,7 +173,7 @@ modify id;
 
 swql8.0能够维持持久化的数据
 ![image.png](../../assets/mysql/nrdipi/1647271378505-5acabe04-7c85-4e5f-8dda-153509996839.png)
-![image.png](../../assets/mysql/nrdipi/1647271386938-efa88e55-d7e6-4d90-bcc0-5ca04bc42193.png) <a name="wgkow"></a>
+![image.png](../../assets/mysql/nrdipi/1647271386938-efa88e55-d7e6-4d90-bcc0-5ca04bc42193.png)
 
 # 外键约束
 
@@ -186,7 +186,7 @@ add constraint fK foreign key (`dept_id`) REFERENCES dep2(id)
 ```
 
 ![image.png](../../assets/mysql/nrdipi/1647271544943-e4084dab-3b84-471f-9047-e8615755d5b6.png)
-![image.png](../../assets/mysql/nrdipi/1647271592480-47e2c830-380a-46f5-87b0-954a5d6d745a.png) <a name="Z2wEI"></a>
+![image.png](../../assets/mysql/nrdipi/1647271592480-47e2c830-380a-46f5-87b0-954a5d6d745a.png)
 
 # check约束
 
@@ -204,7 +204,7 @@ insert into de22
 values (1,1500);
 ```
 
-<a name="JlMOH"></a>
+
 
 # default约束
 

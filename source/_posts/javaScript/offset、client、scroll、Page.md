@@ -3,7 +3,7 @@ title: offset、client、scroll、Page
 url: https://www.yuque.com/u21419265/kb/go43tg
 ---
 
-<a name="iBTVJ"></a>
+
 
 # offsetHeight、offsetWidth
 
@@ -29,7 +29,7 @@ document.getElementById("app").offsetWidth // 190
 }
 ```
 
-<a name="DbJFm"></a>
+
 
 # clientHeight、clientWidth
 
@@ -43,11 +43,11 @@ document.getElementById("app").clientHeight // 150
 document.getElementById("app").clientWidth // 150
 ```
 
-<a name="N7T2W"></a>
+
 
 # scrollHeight、scrollWidth
 
-scrollHeight 的值等于该元素在不使用滚动条的情况下为了适应视口中所用内容所需的最小高度。** 没有垂直滚动条的情况下，scrollHeight值与元素视图填充所有内容所需要的最小值clientHeight相同**。**包括元素的padding，但不包括元素的border和margin。**scrollHeight也包括 ::before 和 ::after这样的伪元素。 <a name="tBN4f"></a>
+scrollHeight 的值等于该元素在不使用滚动条的情况下为了适应视口中所用内容所需的最小高度。** 没有垂直滚动条的情况下，scrollHeight值与元素视图填充所有内容所需要的最小值clientHeight相同**。**包括元素的padding，但不包括元素的border和margin。**scrollHeight也包括 ::before 和 ::after这样的伪元素。
 
 # offsetTop、offsetLeft
 
@@ -106,7 +106,7 @@ console.log(box.offsetTop); //43 app的border 20px box margin 15px body 自带�
 
 > 父元素设计的position 为 relative absolute fixed sticky 则子元素的offsetParent则是当前的父元素
 
-<a name="J8jCm"></a>
+
 
 # scrollTop、scrollLeft
 
@@ -148,7 +148,7 @@ document.getElementById("btn").onclick = function () {
 > 当scrollHeight -scrollTop == clientHeight时候 垂直滚动条滚到底部
 > 当scrollWidth -scrollLeft == clientWidth时候 水平条滚到右侧
 
-<a name="TKzh0"></a>
+
 
 # pageX，pageY
 

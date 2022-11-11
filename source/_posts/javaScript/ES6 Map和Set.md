@@ -4,7 +4,7 @@ url: https://www.yuque.com/u21419265/kb/poy5ir
 ---
 
 对于Map的定义
-Map对象用于保存键值对 任何值(对象或者原始值)都可以作为一个键或者一个值 <a name="rmJIp"></a>
+Map对象用于保存键值对 任何值(对象或者原始值)都可以作为一个键或者一个值
 
 # Map与Object的区别
 
@@ -14,7 +14,7 @@ Map对象用于保存键值对 任何值(对象或者原始值)都可以作为�
 4. Object 都有自己的原型，原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。
 
 如果是基本数据类型 则 key取的是基本数据类型的值
-如果是引用数据类型 则key取的是地址的值 <a name="TJ44R"></a>
+如果是引用数据类型 则key取的是地址的值
 
 # set(key,value)和get(key)
 
@@ -60,7 +60,7 @@ console.log(NaNMap.get(NaN)); // NaN
 // 虽然 NaN 和任何值甚至和自己都不相等(NaN !== NaN 返回true)，NaN作为Map的键来说是没有区别的。
 ```
 
-<a name="yivwO"></a>
+
 
 # Map的迭代
 
@@ -77,7 +77,7 @@ for (let [key, value] of map) {
 }
 ```
 
-<a name="ojAna"></a>
+
 
 ## entries() : MapIterator
 
@@ -90,7 +90,7 @@ for (let [key,value] of map.entries()) {
 }
 ```
 
-<a name="Vk7WM"></a>
+
 
 ## keys() : MapIterator
 
@@ -102,7 +102,7 @@ for (const key of map.keys()) {
 }
 ```
 
-<a name="iSb0a"></a>
+
 
 ## values(): MapIterator
 
@@ -114,7 +114,7 @@ for (const value of map.values()) {
 }
 ```
 
-<a name="zvBXW"></a>
+
 
 ## forEach()
 
@@ -124,7 +124,7 @@ map.forEach((value, key,map) => {
 })
 ```
 
-<a name="JBzUc"></a>
+
 
 # constractor
 
@@ -142,7 +142,7 @@ let maps = new Map(array) //Map(2) { 'key1' => 'value1', 'key2' => 'value2' }
 varoutArray = Array.from(maps);
 ```
 
-<a name="tA114"></a>
+
 
 ## Map克隆
 
@@ -156,7 +156,7 @@ console.log(maps === maps2); // false
 console.log(maps2) // //Map(2) { 'key1' => 'value1', 'key2' => 'value2'}
 ```
 
-<a name="PGHlx"></a>
+
 
 # 合并
 
@@ -169,7 +169,7 @@ var second = new Map([[1, 'uno'], [2, 'dos']]);
 var merged = new Map([...first, ...second]); //对应值即 uno，dos， three
 ```
 
-<a name="lzyg7"></a>
+
 
 # 结构赋值
 
@@ -180,7 +180,7 @@ map.set(2,3) //Map(2) {1 => 2, 2 => 3}
 [...map] // [Array(2), Array(2)]
 ```
 
-<a name="casbe"></a>
+
 
 # Set
 
@@ -212,20 +212,20 @@ set.add(NaN)
 console.log(set) // Set(3) { 0, undefined, NaN }
 ```
 
-<a name="s8hzE"></a>
+
 
 ## 类型转换
 
-<a name="JYrbP"></a>
+
 
 ## 数组转set
 
 ```javascript
-var mySet = new Set(["value1", "value2", "value3"]); 
+var mySet = new Set(["value1", "value2", "value3"]);
 //Set(3) {'value1', 'value2', 'value3'}
 ```
 
-<a name="LDt1A"></a>
+
 
 ## Stirng转set
 
@@ -234,21 +234,21 @@ new Set("hello")
 Set(4) {'h', 'e', 'l', 'o'}
 ```
 
-<a name="e0uzZ"></a>
+
 
 ## set转数组
 
 ```javascript
-var mySet = new Set(["value1", "value2", "value3"]); 
+var mySet = new Set(["value1", "value2", "value3"]);
 //Set(3) {'value1', 'value2', 'value3'}
 var mySetArray = [...mySet]
 ```
 
-<a name="TLwxp"></a>
+
 
 # Set对象去重
 
-<a name="JXemS"></a>
+
 
 ## Array 数组去重
 
@@ -257,7 +257,7 @@ vat mySet = new Set([1,2,3,4,4,4,5])
 [...mySet] // [1,2,3,4,5]
 ```
 
-<a name="y5lH9"></a>
+
 
 ## 求两个数组的并集
 
@@ -268,7 +268,7 @@ var c  = new Set([...a,...b])
 // Set(8) { 1, 2, 3, 4, 5, 6, 7, 8 }
 ```
 
-<a name="I3ny8"></a>
+
 
 ## 交集
 
@@ -282,7 +282,7 @@ var c = new Set([...a].filter(x => b.has(x)))
 console.log(c) //Set(5) { 1, 2, 3, 4, 5 }
 ```
 
-<a name="E6KMz"></a>
+
 
 ## 差集
 
@@ -295,23 +295,23 @@ var c = new Set([...a].filter(t => !b.has(t))) //Set(1) { 6 }
 console.log(c.size); // 1
 ```
 
-<a name="cEVht"></a>
+
 
 ## API
 
 - add(value)：添加某个值，返回Set结构本身。
 - delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。
 - has(value)：返回一个布尔值，表示该值是否为Set的成员。
-- clear()：清除所有成员，没有返回值。 <a name="AyKVT"></a>
+- clear()：清除所有成员，没有返回值。
 
 ## 遍历
 
-Set内部的元素可以用 for...of 遍历。 <a name="eAUbW"></a>
+Set内部的元素可以用 for...of 遍历。
 
 ## 转数组
 
 - **Array.from()方法可以将Set数据类型转化为数组类型。**
-- **\[...set]** <a name="EfONk"></a>
+- **\[...set]**
 
 # 去重
 
@@ -325,7 +325,7 @@ var map  = new Set(c)
 console.log(map); // Set(8) { 1, 2, 3, 4, 5, 6, 7, 8 }
 ```
 
-<a name="WPECV"></a>
+
 
 ## 对象去重
 

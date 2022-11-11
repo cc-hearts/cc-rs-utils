@@ -3,7 +3,7 @@ title: abstract
 url: https://www.yuque.com/u21419265/bo8cge/ablqhz
 ---
 
-<a name="b90tV"></a>
+
 
 # abstract 修饰类或者方法
 
@@ -28,7 +28,7 @@ public abstract void eat();
 > 抽象方法只能在抽象类中 抽象类中可以没有抽象方法
 
 abstract 不能修饰 属性 构造器等结构（属性和构造器不能被重写）
-abstract 不能修饰私有方法 静态方法 final的方法 <a name="IsIHw"></a>
+abstract 不能修饰私有方法 静态方法 final的方法
 
 # 抽象类的匿名子类
 
@@ -79,6 +79,6 @@ public static void method(Eployer e) {}
 ```java
 methods(new Employee().new Eployer() {
   @Override
-  public void work() {}  
+  public void work() {}
 })
 ```

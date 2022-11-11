@@ -14,7 +14,7 @@ url: https://www.yuque.com/u21419265/bo8cge/pr43g1
 
 根据一个父File对象和子文件路径创建File对象
 
-![image.png](../../assets/java/pr43g1/1658661390343-56164763-033d-42de-9ef2-950f2ad030ec.png) <a name="upI5c"></a>
+![image.png](../../assets/java/pr43g1/1658661390343-56164763-033d-42de-9ef2-950f2ad030ec.png)
 
 ### 分类
 

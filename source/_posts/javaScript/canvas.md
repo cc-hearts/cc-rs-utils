@@ -3,7 +3,7 @@ title: canvas
 url: https://www.yuque.com/u21419265/kb/avdgyb
 ---
 
-<a name="p9FuY"></a>
+
 
 # canvas设置宽高
 
@@ -23,7 +23,7 @@ canvas 如果没有指定width和height 则默认是300 * 150的布局
 <canvas ref={canvasRef as React.RefObject<HTMLCanvasElement>}>您的浏览器不支持canvas 请先升级浏览器</canvas>
 ```
 
-**canvas元素默认被网格所覆盖。通常来说网格中的一个单元相当于 canvas 元素中的一像素。栅格的起点为左上角，坐标为 (0,0) 。所有元素的位置都相对于原点来定位。所以图中蓝色方形左上角的坐标为距离左边（X 轴）x 像素，距离上边（Y 轴）y 像素，** <a name="eqA2X"></a>
+**canvas元素默认被网格所覆盖。通常来说网格中的一个单元相当于 canvas 元素中的一像素。栅格的起点为左上角，坐标为 (0,0) 。所有元素的位置都相对于原点来定位。所以图中蓝色方形左上角的坐标为距离左边（X 轴）x 像素，距离上边（Y 轴）y 像素，**
 
 # getImageData和putImageData
 
@@ -35,7 +35,7 @@ imgData = ctx.getImageData(0, 0, canvas.clientWidth, canvas.clientWidth);
   ctx.putImageData(imgData, 0, 0);
 ```
 
-<a name="tlhZS"></a>
+
 
 # 绘制矩形
 
@@ -96,7 +96,7 @@ canvast 提供了三种方法绘制矩形：
     ctx.clearRect(85, 25, 25, 25);
 ```
 
-<a name="YG9JL"></a>
+
 
 # 绘制路径
 
@@ -151,7 +151,7 @@ function drawPath<T extends HTMLCanvasElement>(canvas: T): void {
 }
 ```
 
-<a name="xaBYk"></a>
+
 
 # 绘制圆弧
 
@@ -212,7 +212,7 @@ if (!canvas.getContext) return;
   }
 ```
 
-![image.png](../../assets/javaScript/avdgyb/1641890151290-1ee199b8-70d8-4c8e-afee-681dd537afce.png) <a name="JAyjC"></a>
+![image.png](../../assets/javaScript/avdgyb/1641890151290-1ee199b8-70d8-4c8e-afee-681dd537afce.png)
 
 # 绘制贝塞尔曲线
 
@@ -436,7 +436,7 @@ const Bezier3: React.FC<props> = function () {
 export default Bezier3;
 ```
 
-<a name="WNTIh"></a>
+
 
 # 设置样式
 
@@ -470,7 +470,7 @@ function style<T extends HTMLCanvasElement>(canvas: T): void {
   }
 ```
 
-**globalAlpha 这个属性影响到 canvas 里所有图形的透明度，有效的值范围是 0.0 （完全透明）到 1.0（完全不透明），默认是 1.0。(用rgba代替)** <a name="G6JCH"></a>
+**globalAlpha 这个属性影响到 canvas 里所有图形的透明度，有效的值范围是 0.0 （完全透明）到 1.0（完全不透明），默认是 1.0。(用rgba代替)**
 
 # 线宽度
 
@@ -495,7 +495,7 @@ function lineStyle<T extends HTMLCanvasElement>(canvas: T): void {
 }
 ```
 
-![image.png](../../assets/javaScript/avdgyb/1641952362690-cdd482dc-803c-4e03-8aab-2048bd2ad304.png) <a name="QMFT5"></a>
+![image.png](../../assets/javaScript/avdgyb/1641952362690-cdd482dc-803c-4e03-8aab-2048bd2ad304.png)
 
 # lineCap 线条末端样式
 
@@ -513,7 +513,7 @@ function lineStyle<T extends HTMLCanvasElement>(canvas: T): void {
 2. bevel 在相连部分的末端填充一个额外的以三角形为底的区域， 每个部分都有各自独立的矩形拐角。
 3. miter(默认) 通过延伸相连部分的外边缘，使其相交于一点，形成一个额外的菱形区域。
 
-![image.png](../../assets/javaScript/avdgyb/1641971704115-c6e139ba-d0f6-4e5b-a7ba-366cff8b230e.png) <a name="q0ohe"></a>
+![image.png](../../assets/javaScript/avdgyb/1641971704115-c6e139ba-d0f6-4e5b-a7ba-366cff8b230e.png)
 
 # 虚线
 
@@ -534,7 +534,7 @@ function lineDash<T extends HTMLCanvasElement>(canvas: T): void {
 }
 ```
 
-<a name="NEUfP"></a>
+
 
 # 绘制文本
 
@@ -553,14 +553,14 @@ function fillText<T extends HTMLCanvasElement>(canvas: T): void {
 }
 ```
 
-<a name="Ap2BK"></a>
+
 
 ### 给文本添加样式
 
 1. font = value 当前我们用来绘制文本的样式。这个字符串使用和 CSS font 属性相同的语法。 默认的字体是 10px sans-serif。
 2. textAlign = value 文本对齐选项。 可选的值包括：start, end, left, right or center。 默认值是 start。
 3. textBaseline = value 基线对齐选项，可选的值包括：top, hanging, middle, alphabetic, ideographic, bottom。默认值是 alphabetic。。
-4. direction = value 文本方向。可能的值包括：ltr, rtl, inherit。默认值是 inherit。 <a name="SE05t"></a>
+4. direction = value 文本方向。可能的值包括：ltr, rtl, inherit。默认值是 inherit。
 
 # 绘制图片
 
@@ -587,13 +587,13 @@ function canvasImg<T extends HTMLCanvasElement>(canvas: T): void {
 > 使用webpack5 加载图片不再是url-loader file-loader row-loader等了 而是内置了asset模块
 > @see https://webpack.docschina.org/guides/asset-modules/
 
-![image.png](../../assets/javaScript/avdgyb/1641978974783-514dc9aa-fddd-412b-99d3-05e11209f251.png) <a name="x3vou"></a>
+![image.png](../../assets/javaScript/avdgyb/1641978974783-514dc9aa-fddd-412b-99d3-05e11209f251.png)
 
 ## 切片(slice)
 
 > drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 
-<a name="uaHVC"></a>
+
 
 # 保存和恢复
 
@@ -635,7 +635,7 @@ function saveAndRestore<T extends HTMLCanvasElement>(canvas: T): void {
 }
 ```
 
-<a name="X6Tbo"></a>
+
 
 # 变形
 
@@ -654,7 +654,7 @@ translate 移动的是 canvas 的坐标原点(坐标变换)。
     ctx.fillRect(0, 0, 100, 100);
 ```
 
-<a name="AhX3v"></a>
+
 
 ## rotate
 
@@ -664,7 +664,7 @@ translate 移动的是 canvas 的坐标原点(坐标变换)。
 ctx.rotate((Math.PI / 180) * 45);
 ```
 
-<a name="BCbF1"></a>
+
 
 ## scale
 
@@ -674,7 +674,7 @@ ctx.rotate((Math.PI / 180) * 45);
  ctx.scale(1.5, 0.8);
 ```
 
-<a name="ZC35m"></a>
+
 
 ## transform (变形矩阵)
 
@@ -687,7 +687,7 @@ ctx.rotate((Math.PI / 180) * 45);
 > - e (dx): Horizontal moving.
 > - f (dy): Vertical moving.
 
-<a name="kr3H7"></a>
+
 
 # globalCompositeOperation 合成
 
@@ -721,7 +721,7 @@ red: #ff0000;
 > 11.xor  重叠部分会变成透明。
 > 12\. copy 只有新图像会被保留，其余的全部被清除(边透明)。
 
-<a name="tVsRz"></a>
+
 
 ## 裁剪路径
 
@@ -746,7 +746,7 @@ function clip<T extends HTMLCanvasElement>(canvas: T): void {
 }
 ```
 
-![image.png](../../assets/javaScript/avdgyb/1641983494425-b6b66f11-d370-4f7a-9b2b-33f0cb051cd0.png) <a name="Td72h"></a>
+![image.png](../../assets/javaScript/avdgyb/1641983494425-b6b66f11-d370-4f7a-9b2b-33f0cb051cd0.png)
 
 # demo1 太阳系
 
@@ -950,7 +950,7 @@ export default Sun;
 
 ```
 
-<a name="Slsm4"></a>
+
 
 # 时钟案例
 
@@ -1183,7 +1183,7 @@ export default Clock;
 
 ```
 
-<a name="xnJXe"></a>
+
 
 # 刮刮卡案例
 
@@ -1282,7 +1282,7 @@ const ScratchCard: React.FC<props> = () => {
 export default ScratchCard;
 ```
 
-<a name="a8x4d"></a>
+
 
 # 自定义画布Demo
 

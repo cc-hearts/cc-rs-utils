@@ -22,7 +22,7 @@ Exception 其他因编译错误或者偶然的外在因素导致的一般性问�
 编译错误 字节码文件不会生成
 运行错误 会生成字节码文件 运行会报错
 
-<a name="EMKPM"></a>
+
 
 # 处理异常错误的方式
 
@@ -82,13 +82,13 @@ finally的作用：finally的代码是一定会被执行的代码 即使catch中
     }
 ```
 
-<a name="Gfk2w"></a>
+
 
 # finally的使用案例
 
 数据库的连接 输入输出流 网络编程Socket等资源 JVM是不能自动回收的 我们需要自己手动的进行资源释放 此时的资源释放 就需要声明在finally中
 try-catch-finally中可以嵌套使用
-**运行时异常一般不用try-catch** <a name="GNW07"></a>
+**运行时异常一般不用try-catch**
 
 ## 异常处理的方式二： throws  + 异常类型
 
@@ -110,7 +110,7 @@ try-catch-finally中可以嵌套使用
 **try-catch-finally 真正的将异常给处理掉**
 **throws的方式 只是将异常抛给了方法的调用者 没有处理掉异常**
 
-<a name="w4bYa"></a>
+
 
 # 使用throws
 
@@ -118,7 +118,7 @@ try-catch-finally中可以嵌套使用
 
 如果一个方法里面会递进关系调用另外几个方法的 可以使得另外几个方法throw的方式进行处理(如果前面的代码出错了 后面的代码则可以不用进行处理) 而这个方法可以使用try-catch-finally进行处理
 
-<a name="xcsZC"></a>
+
 
 # 手动抛出异常
 
@@ -131,7 +131,7 @@ throw
        throw  new RuntimeException();
 ```
 
-<a name="t1sgn"></a>
+
 
 # 自定义异常类
 

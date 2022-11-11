@@ -3,7 +3,7 @@ title: ES6新特性
 url: https://www.yuque.com/u21419265/kb/st128v
 ---
 
-<a name="vLVmo"></a>
+
 
 # Object.is
 

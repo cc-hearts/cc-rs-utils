@@ -67,7 +67,7 @@ String重写的equals方法
     }
 ```
 
-<a name="Kk7bj"></a>
+
 
 # 包装类
 
@@ -96,7 +96,7 @@ Integer in1 = Integer.valueOf("123");
         int i = in1.intValue();
 ```
 
-<a name="MFdPx"></a>
+
 
 ## JDK5.0新特性: 自动拆箱与自动装箱
 
@@ -182,7 +182,7 @@ IntegerCache:
     }
 ```
 
-<a name="uqmcz"></a>
+
 
 # Integer缓存机制
 

@@ -3,7 +3,7 @@ title: 生成器Genrator
 url: https://www.yuque.com/u21419265/kb/yeya1n
 ---
 
-<a name="JAzLk"></a>
+
 
 # 生成器函数
 
@@ -13,7 +13,7 @@ url: https://www.yuque.com/u21419265/kb/yeya1n
 
 > [生成器函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
 
-生成器函数可以由构造函数生成或者直接function*(){} 生成 <a name="ukRWd"></a>
+生成器函数可以由构造函数生成或者直接function*(){} 生成
 
 ## 由构造函数生成
 
@@ -59,13 +59,13 @@ console.log(
 ); // 1
 ```
 
-<a name="gqUCV"></a>
+
 
 # yield*
 
 或者如果用的是 [yield*](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/yield*)（多了个星号），则表示将执行权移交给另一个生成器函数（当前生成器暂停执行）。
 
-<a name="deduL"></a>
+
 
 # 迭代generator 对象
 
@@ -82,7 +82,7 @@ for (const iterator of i) {
 }
 ```
 
-<a name="r79vq"></a>
+
 
 ## 多维数组变为一维数组
 

@@ -3,7 +3,7 @@ title: 接口interface
 url: https://www.yuque.com/u21419265/bo8cge/vixekl
 ---
 
-<a name="mglOT"></a>
+
 
 # 接口定义的是一种规范
 
@@ -47,7 +47,7 @@ class AA extends BB implements CC,DD,EE {
 }
 ```
 
-<a name="ANMrs"></a>
+
 
 # 接口与接口之间
 
@@ -97,7 +97,7 @@ public class c  implements a,b{
 
 > 调用接口中的默认方法 a.super.name(number)
 
-<a name="LsFip"></a>
+
 
 # 内部类
 
@@ -114,7 +114,7 @@ Person p = new Person();
 Person.Bird bird = p.new Bird();
 ```
 
-<a name="s6GiI"></a>
+
 
 ## 调用外部类的非静态属性
 
@@ -132,7 +132,7 @@ public interface Equipment {
 private Equipment equipment;
 ```
 
-<a name="j9eWY"></a>
+
 
 # 内部接口
 

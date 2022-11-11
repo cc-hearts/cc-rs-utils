@@ -3,11 +3,11 @@ title: Collection集合(容器)
 url: https://www.yuque.com/u21419265/bo8cge/twx3ax
 ---
 
-<a name="unljD"></a>
+
 
 # Collection
 
-<a name="EvwgW"></a>
+
 
 ## Collection：单列数据 定义了存储一组对象的方法的集合
 
@@ -55,7 +55,7 @@ url: https://www.yuque.com/u21419265/bo8cge/twx3ax
     }
 ```
 
-<a name="onFaF"></a>
+
 
 ## ArrayList源码分析
 
@@ -132,7 +132,7 @@ private static final int DEFAULT_CAPACITY = 10;
     }
 ```
 
-<a name="OVHqD"></a>
+
 
 ## LinkeList源码解析
 
@@ -209,7 +209,7 @@ private static class Node<E> {
     }
 ```
 
-<a name="yjr43"></a>
+
 
 ## Collection的常用方法
 
@@ -258,7 +258,7 @@ private static class Node<E> {
     }
 ```
 
-<a name="O7Ten"></a>
+
 
 ## 迭代器使用
 
@@ -303,7 +303,7 @@ Iterator iterator1 = coll1.iterator();
         }
 ```
 
-<a name="UPepu"></a>
+
 
 # List接口方法
 
@@ -335,7 +335,7 @@ Iterator iterator1 = coll1.iterator();
     }
 ```
 
-<a name="AA2ar"></a>
+
 
 ## 注意Collection接口的remove和List接口的remove
 
@@ -350,7 +350,7 @@ arr.remove(2) // 删除的是索引值
 arr.move(new Integer(2)) 删除的是值
 ```
 
-<a name="cZ5gD"></a>
+
 
 ## 迭代器原理
 
@@ -364,20 +364,20 @@ Iterator iterator = coll1.iterator();
 next 时候 指针下移 并且将下移以后的位置上的元素返回
 
 - Iterator 仅用于遍历集合 Iterator 本身并不提供承装对象的能力 如果需要创爱你Iterator对象 则必须要有一个被迭代的组合
-- 集合对象每次调用Iterator() 方法都能得到一个全新的迭代器对象 默认的指针在集合的第一个元素之前 <a name="NENqV"></a>
+- 集合对象每次调用Iterator() 方法都能得到一个全新的迭代器对象 默认的指针在集合的第一个元素之前
 
 # Set：元素无序 不重复的集合
 
 - HashSet 作为set的主要实现类 线程不安全  可以存储null值
   - LinkedHashSet 作为hashSet的子类 遍历其内部结构时 可以按照添加的顺序遍历
-- TreeSet 底层红黑树 可以按照添加对象的指定属性 进行排序 <a name="PX5kP"></a>
+- TreeSet 底层红黑树 可以按照添加对象的指定属性 进行排序
 
 ## hashSet
 
 **无序性 ： 存储的数据在底层数组中并非按照数组的索引的顺序添加的 而是根据数据的hash值决定的**
 **不可重复性： 保证添加的元素按照equals()判断时 不能返回true（调用的是元素的equals）**
 **hashSet开始的数组的长度是16**
-**hashSet 运用了数组和链表的结合** <a name="cpSMP"></a>
+**hashSet 运用了数组和链表的结合**
 
 ## Set的无序的原因
 
@@ -407,7 +407,7 @@ new hashSet()
     }
 ```
 
-<a name="yLnRt"></a>
+
 
 ## hashCode重写
 
@@ -427,19 +427,19 @@ public int hashCode() {
 > 3. 31 可以由 i * 31 = (i << 5)  - 1得到
 > 4. 31是个素数 （可以有效减少冲突）
 
-<a name="MddQv"></a>
+
 
 ## LinkedHashSet
 
 LinkedHashSet 作为hashSet的子类 在添加数据的同时 每个数据还维护了一对前后指针
 对于频繁的遍历操作 LinkedHashSet的效率要高于hashSet
-![image.png](../../assets/java/twx3ax/1644492239211-db29622f-85b8-4645-ba67-8af5c12dfc1d.png) <a name="Qmyu8"></a>
+![image.png](../../assets/java/twx3ax/1644492239211-db29622f-85b8-4645-ba67-8af5c12dfc1d.png)
 
 ## TreeSet
 
 TreeSet  add添加的属性必须由同一个类提供
 **TreeSet比较相同调用的是compareTo()**
-**TreeSet以及TreeMap采用红黑树的结构** <a name="sBcFV"></a>
+**TreeSet以及TreeMap采用红黑树的结构**
 
 ### 自然排序
 
@@ -506,7 +506,7 @@ TreeSet  add添加的属性必须由同一个类提供
         }
 ```
 
-<a name="ktMvq"></a>
+
 
 ### 定制排序
 
@@ -547,7 +547,7 @@ TreeSet  add添加的属性必须由同一个类提供
     }
 ```
 
-<a name="to4RL"></a>
+
 
 ## set添加demo
 
@@ -576,7 +576,7 @@ TreeSet  add添加的属性必须由同一个类提供
     }
 ```
 
-<a name="Kh1qn"></a>
+
 
 # Map
 
@@ -601,7 +601,7 @@ TreeSet  add添加的属性必须由同一个类提供
     }
 ```
 
-![image.png](../../assets/java/twx3ax/1644541953706-a2ea2be5-8bc4-42eb-8738-c64b148d1306.png) <a name="DTS1T"></a>
+![image.png](../../assets/java/twx3ax/1644541953706-a2ea2be5-8bc4-42eb-8738-c64b148d1306.png)
 
 ## Map结构的理解
 
@@ -609,7 +609,7 @@ Map中的key 无序的 不可重复的 使用Set存储所有的key
 key 所在的类要重写equals() 和 hashCode() 以equals为例
 Map中的value  无序的 可重复的 使用Collection存储所有的value
 value 所在的类要重写equals()
-一个键值对 key-value 构成了一个Entry对象 <a name="yA4NU"></a>
+一个键值对 key-value 构成了一个Entry对象
 
 ## hashMap底层实现
 
@@ -638,7 +638,7 @@ JDK8 与JDK7的不同
 2. jdk8的底层数组是 Node\[] 而非Entry\[]
 3. 首次调用put()方法时 底层创建长度为16的数组
 4. jdk7底层只有数组 + 链表的结构 jdk8底层的结构是 数组 + 链表 + 红黑树
-5. 当输入的某一个索引位置上的元素以链表的形式存在的数据的个数 > 且数组的长度 > 64时 此索引位置伤的所有数据改为使用红黑树存储 <a name="mcuk2"></a>
+5. 当输入的某一个索引位置上的元素以链表的形式存在的数据的个数 > 且数组的长度 > 64时 此索引位置伤的所有数据改为使用红黑树存储
 
 ## 临界值
 
@@ -740,7 +740,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
     }
 ```
 
-<a name="c3pR2"></a>
+
 
 ## Map常用方法
 
@@ -799,7 +799,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
     }
 ```
 
-<a name="b8vBd"></a>
+
 
 ## 遍历Map
 
@@ -835,7 +835,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
     }
 ```
 
-treeMap <a name="Ukluw"></a>
+treeMap
 
 ## Properties
 
@@ -859,7 +859,7 @@ key-value都是String 类型
     }
 ```
 
-<a name="uljWm"></a>
+
 
 # Collections工具类的使用
 
