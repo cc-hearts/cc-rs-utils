@@ -1,6 +1,6 @@
 ---
 title: Hook
-url: https://www.yuque.com/u21419265/poi9nc/xkgu7o
+categories: React
 ---
 
 # useImperativeHandle

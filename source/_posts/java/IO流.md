@@ -1,6 +1,6 @@
 ---
 title: IO流
-url: https://www.yuque.com/u21419265/bo8cge/pr43g1
+categories: Java
 ---
 
 1. public File(String pathname) 以pathname为路径的建File对象，可以是绝对路径或者相对路径，如果 pathname是相对路径，则默认的当前路径在系统属性user.dir中存储。

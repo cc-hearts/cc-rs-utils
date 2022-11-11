@@ -1,6 +1,6 @@
 ---
 title: DOM
-url: https://www.yuque.com/heart-ma72y/zrrem5/sb2kxp
+categories: JavaScript
 ---
 
 

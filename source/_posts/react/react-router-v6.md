@@ -1,6 +1,6 @@
 ---
 title: react-router-v6
-url: https://www.yuque.com/u21419265/poi9nc/virw60
+categories: React
 ---
 
 link标签传递值的方式：

@@ -1,6 +1,6 @@
 ---
 title: nvm安装
-url: https://www.yuque.com/u21419265/dlfa41/xdtgf2
+categories: Record
 ---
 
 

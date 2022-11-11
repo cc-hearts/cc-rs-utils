@@ -1,6 +1,6 @@
 ---
 title: 在网站中使用react
-url: https://www.yuque.com/u21419265/poi9nc/aogeg7
+categories: React
 ---
 
 test\_button.js:

@@ -1,6 +1,6 @@
 ---
-title: Mac
-url: https://www.yuque.com/u21419265/dlfa41/wr3e35
+title: Base
+categories: Mac
 ---
 
 ## Mac压缩文件

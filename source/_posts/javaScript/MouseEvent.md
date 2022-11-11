@@ -1,6 +1,6 @@
 ---
 title: MouseEvent
-url: https://www.yuque.com/u21419265/kb/yq2kme
+categories: JavaScript
 ---
 
 - "screenX"，long 型可选，默认为 0，设置鼠标事件发生时相对于用户屏幕的水平坐标位置；该操作并不会改变真实鼠标的位置。

@@ -1,6 +1,6 @@
 ---
 title: Collection集合(容器)
-url: https://www.yuque.com/u21419265/bo8cge/twx3ax
+categories: Java
 ---
 
 

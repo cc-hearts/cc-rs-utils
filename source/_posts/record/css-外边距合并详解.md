@@ -1,6 +1,6 @@
 ---
 title: css-外边距合并详解
-url: https://www.yuque.com/heart-ma72y/cigpg2/iohdsk
+categories: Record
 ---
 
 > 在同一个BFC布局的两个相邻的块级元素会发生垂直外边距重叠的情况

@@ -1,6 +1,6 @@
 ---
 title: node install安装错误
-url: https://www.yuque.com/u21419265/dlfa41/dy3m5g
+categories: Record
 ---
 
 ```shell

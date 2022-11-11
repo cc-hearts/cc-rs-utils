@@ -1,6 +1,6 @@
 ---
 title: ES6 Map和Set
-url: https://www.yuque.com/u21419265/kb/poy5ir
+categories: JavaScript
 ---
 
 对于Map的定义

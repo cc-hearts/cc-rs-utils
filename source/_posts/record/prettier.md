@@ -1,6 +1,6 @@
 ---
 title: prettier
-url: https://www.yuque.com/u21419265/dlfa41/lzmgs1
+categories: Record
 ---
 
 ```typescript

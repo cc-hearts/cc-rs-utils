@@ -1,6 +1,6 @@
 ---
 title: input与inlinle-block的问题
-url: https://www.yuque.com/heart-ma72y/cigpg2/nhpomx
+categories: Record
 ---
 
 

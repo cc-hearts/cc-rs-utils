@@ -1,6 +1,6 @@
 ---
 title: 异常（Error 或Exception）
-url: https://www.yuque.com/u21419265/bo8cge/grt6b3
+categories: Java
 ---
 
 Error Java虚拟机无法解决的严重问题 例如StackOverflowError（栈溢出）和OOM（内存溢出） 一般不编写针对性代码进行处理

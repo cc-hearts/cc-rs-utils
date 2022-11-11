@@ -1,6 +1,6 @@
 ---
 title: super关键字
-url: https://www.yuque.com/u21419265/bo8cge/saa5by
+categories: Java
 ---
 
 父类super指向父类 可以调用父类的方法

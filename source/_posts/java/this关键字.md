@@ -1,6 +1,6 @@
 ---
 title: this关键字
-url: https://www.yuque.com/u21419265/bo8cge/uaieix
+categories: Java
 ---
 
 this可以用来修饰 属性 方法 构造器

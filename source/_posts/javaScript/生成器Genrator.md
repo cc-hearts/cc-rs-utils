@@ -1,6 +1,6 @@
 ---
 title: 生成器Genrator
-url: https://www.yuque.com/u21419265/kb/yeya1n
+categories: JavaScript
 ---
 
 

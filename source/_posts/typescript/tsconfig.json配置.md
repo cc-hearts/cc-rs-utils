@@ -1,6 +1,6 @@
 ---
 title: tsconfig.json配置
-url: https://www.yuque.com/u21419265/xu5hud/sdfeym
+categories: Typescript
 ---
 
 tsconfig.json有以下顶层属性:

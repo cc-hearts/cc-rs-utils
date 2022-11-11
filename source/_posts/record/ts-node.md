@@ -1,6 +1,6 @@
 ---
 title: ts-node
-url: https://www.yuque.com/heart-ma72y/cigpg2/oug4h6
+categories: Record
 ---
 
 ts-node 需要指定`tsconfig`需要使用的指令是`-P`

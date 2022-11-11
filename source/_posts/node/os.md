@@ -1,6 +1,6 @@
 ---
 title: os
-url: https://www.yuque.com/heart-ma72y/ve7v1k/gdfqkg
+categories: Node
 ---
 
 操作系统相关的包

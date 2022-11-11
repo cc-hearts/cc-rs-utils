@@ -1,6 +1,6 @@
 ---
 title: java.lang.Object和包装类
-url: https://www.yuque.com/u21419265/bo8cge/oeevgg
+categories: Java
 ---
 
 - equals():boolean

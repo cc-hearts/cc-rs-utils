@@ -1,6 +1,6 @@
 ---
 title: offset、client、scroll、Page
-url: https://www.yuque.com/u21419265/kb/go43tg
+categories: JavaScript
 ---
 
 

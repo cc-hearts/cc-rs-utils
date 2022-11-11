@@ -1,6 +1,6 @@
 ---
 title: git操作
-url: https://www.yuque.com/u21419265/dlfa41/fvmlp4
+categories: Record
 ---
 
 git branch -d local

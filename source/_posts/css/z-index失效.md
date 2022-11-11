@@ -1,6 +1,6 @@
 ---
 title: z-index失效
-url: https://www.yuque.com/u21419265/rceu41/dwpll5
+categories: CSS
 ---
 
 1、一般z-index的使用是在有两个重叠的标签，在一定的情况下控制其中一个在另一个的上方出现。

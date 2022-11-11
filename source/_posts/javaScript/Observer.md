@@ -1,6 +1,6 @@
 ---
 title: Observer
-url: https://www.yuque.com/u21419265/kb/oh6h5s
+categories: JavaScript
 ---
 
 经典实现的库:rxjs

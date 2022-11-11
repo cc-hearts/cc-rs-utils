@@ -1,6 +1,6 @@
 ---
 title: css之filter属性
-url: https://www.yuque.com/u21419265/rceu41/hu7kk3
+categories: CSS
 ---
 
 > filter: none 无任何效果

@@ -1,6 +1,6 @@
 ---
 title: 路由import懒加载不能识别变量解决办法
-url: https://www.yuque.com/u21419265/dlfa41/nyy289
+categories: Record
 ---
 
 webpack 编译es6 动态引入 import() 时不能传入变量，例如import(dir) , 而要传入字符串 import('path/to/my/file.js')，

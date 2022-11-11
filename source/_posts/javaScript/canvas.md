@@ -1,6 +1,6 @@
 ---
 title: canvas
-url: https://www.yuque.com/u21419265/kb/avdgyb
+categories: JavaScript
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: flex布局
-url: https://www.yuque.com/u21419265/rceu41/gtkoi2
+categories: CSS
 ---
 
 > flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。 默认不放大(0)

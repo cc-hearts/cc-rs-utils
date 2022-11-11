@@ -1,6 +1,6 @@
 ---
 title: 约束constraint
-url: https://www.yuque.com/u21419265/ak1tzo/nrdipi
+categories: Mysql
 ---
 
 

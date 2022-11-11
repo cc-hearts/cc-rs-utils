@@ -1,6 +1,6 @@
 ---
 title: vertical-align 对齐
-url: https://www.yuque.com/u21419265/rceu41/gl59sz
+categories: CSS
 ---
 
 对于行内元素、或者是设置了display:inline-block的元素而言 垂直的对齐方式并不是原本的对齐方式 而是跟vertical-align有关

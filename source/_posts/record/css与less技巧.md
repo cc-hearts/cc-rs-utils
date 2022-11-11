@@ -1,6 +1,6 @@
 ---
 title: css与less技巧
-url: https://www.yuque.com/u21419265/dlfa41/kqlleq
+categories: Record
 ---
 
 父元素用display:flex 子元素可以使用margin:auto居中

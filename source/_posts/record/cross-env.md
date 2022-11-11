@@ -1,6 +1,6 @@
 ---
 title: cross-env
-url: https://www.yuque.com/u21419265/dlfa41/sq97bl
+categories: Record
 ---
 
 > 运行跨平台设置和使用环境变量(Node中的环境变量)的脚本

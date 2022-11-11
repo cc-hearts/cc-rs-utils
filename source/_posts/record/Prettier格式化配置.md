@@ -1,6 +1,6 @@
 ---
 title: Prettier格式化配置
-url: https://www.yuque.com/u21419265/dlfa41/bw4wxw
+categories: Record
 ---
 
 ```javascript

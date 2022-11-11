@@ -1,6 +1,6 @@
 ---
 title: "sourcetree提交报错remote: Invalid username or password. fatal:"
-url: https://www.yuque.com/u21419265/dlfa41/zwc7ri
+categories: Record
 ---
 
 > <https://blog.csdn.net/vzdong1/article/details/109708843>

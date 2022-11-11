@@ -1,6 +1,6 @@
 ---
 title: 接口interface
-url: https://www.yuque.com/u21419265/bo8cge/vixekl
+categories: Java
 ---
 
 

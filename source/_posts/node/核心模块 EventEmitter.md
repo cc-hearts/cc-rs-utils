@@ -1,6 +1,6 @@
 ---
 title: 核心模块 EventEmitter
-url: https://www.yuque.com/heart-ma72y/ve7v1k/gi2p3n
+categories: Node
 ---
 
 node 中所有的异步I/O 操作都会在完成的时候发送一个事件队列

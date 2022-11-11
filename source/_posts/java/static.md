@@ -1,6 +1,6 @@
 ---
 title: static
-url: https://www.yuque.com/u21419265/bo8cge/kl2g0x
+categories: Java
 ---
 
 修饰静态变量或者静态方法 只能由类调用 不能由对象调用

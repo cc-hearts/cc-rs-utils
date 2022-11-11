@@ -1,6 +1,6 @@
 ---
 title: css行内元素的padding和margin是否有效
-url: https://www.yuque.com/heart-ma72y/cigpg2/qqkn9v
+categories: Record
 ---
 
 - 行内元素的padding-top、padding-bottom、margin-top、margin-bottom属性设置是无效的；
