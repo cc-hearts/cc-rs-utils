@@ -43,7 +43,16 @@ categories: Config
 
   "files.trimTrailingWhitespace": true, // 保存文件时候删除行尾的空格
 
-  "workbench.iconTheme": "material-icon-theme" // 主题文件夹
+  "workbench.iconTheme": "material-icon-theme", // 主题文件夹
+  "explorer.confirmDelete": false, // 删除文件是否确认
+  "git.confirmSync": false, // 同步git存储库先确认
+  "explorer.confirmDragAndDrop": false, // 控制在资源管理器内拖放移动文件或文件夹时是否进行确认
+  
+  "tabnine.experimentalAutoImports": true, // tabnine 插件自动提示
+  
+  "editor.fontFamily": "Fira Code", // 字体设置
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": false, // 是否启用连字符 
 }
 ```
 
@@ -88,15 +97,18 @@ categories: Config
 - CodeSnap
 
 - Butter Comments
+  
   > TODO 等注释显示
 - DotENV
 
 - Quokkas
+  
   > 在线运行
 
 ### 主题
 
 - Material Icon Theme
+  
   > 文件夹主题
 
 ## vscode setting.json
@@ -151,6 +163,22 @@ categories: Config
 
   "files.trimTrailingWhitespace": true,
 
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme",
+  "explorer.confirmDelete": false,
+  "git.confirmSync": false,
+  "explorer.confirmDragAndDrop": false,
+  
+  "tabnine.experimentalAutoImports": true,
+  
+  "editor.fontFamily": "Fira Code",
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": false,
+  // 主题配置
+  "workbench.colorTheme": "Vitesse Light",
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredDarkColorTheme": "Vitesse Dark",
+  "workbench.preferredLightColorTheme": "Vitesse Light",
+  "workbench.preferredHighContrastColorTheme": "Vitesse Dark Soft",
+  "workbench.preferredHighContrastLightColorTheme": "Vitesse Light Soft",
 }
 ```

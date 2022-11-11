@@ -118,7 +118,7 @@ sourceMaps:
       "type": "chrome",
       "webRoot": "${workspaceFolder}",
       "sourceMapPathOverrides": {
-        "webpack://vue2-test/src/*": "${workspaceFolder}/src/*"
+        "webpack:///src/*": "${webRoot}/src/*"
       }
     },
     {
@@ -129,7 +129,7 @@ sourceMaps:
       "url": "http://localhost:8080",
       "webRoot": "${workspaceFolder}/src",
       "sourceMapPathOverrides": {
-        "webpack://vue2-test/src/*": "${webRoot}/*"
+        "webpack:///src/*": "${webRoot}/src/*"
       }
     }
   ]
