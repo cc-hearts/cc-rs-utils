@@ -211,7 +211,7 @@ private static class Node<E> {
 
 <a name="yjr43"></a>
 
-## Collection的常用方法：
+## Collection的常用方法
 
 ```java
    @Test
@@ -260,7 +260,7 @@ private static class Node<E> {
 
 <a name="O7Ten"></a>
 
-## 迭代器使用：
+## 迭代器使用
 
 > 注意迭代器的remove使用
 
@@ -359,7 +359,7 @@ Iterator iterator = coll1.iterator();
 ```
 
 在执行coll1.iterator() 的时候指针会在当前集合的栈空间的顶部（例如位于 - 1位置）
-![](assets/twx3ax/1644376826062-13f97d72-da4d-4df8-ade9-f498f3f6741e.jpeg)
+![](../../assets/java/twx3ax/1644376826062-13f97d72-da4d-4df8-ade9-f498f3f6741e.jpeg)
 当执行hasNext的时候 指针下移 判断当前位置是否有元素 然后恢复指针初始位置
 next 时候 指针下移 并且将下移以后的位置上的元素返回
 
@@ -382,8 +382,8 @@ next 时候 指针下移 并且将下移以后的位置上的元素返回
 ## Set的无序的原因
 
 **向hashSet添加了一个元素a 首先调用元素a所在类的hashCode()方法 计算元素a的哈希值 此哈希值接着通过某种算法计算出在HashSet底层数组中存放的位置(即 索引位置) 判断数组此位置上是否有元素**
-** 	如果没有其他元素 则元素a添加成功**
-**  如果有其他元素(或者以链表形式存在的多个元素) 则比较元素a与元素b的hash值**
+**  如果没有其他元素 则元素a添加成功**
+**如果有其他元素(或者以链表形式存在的多个元素) 则比较元素a与元素b的hash值**
 **hash值不相同 则元素a添加成功**
 **hash值相同 今儿调用元素a的equals方法判断是否与元素b相同**
 **equals返回true 表示相同 元素添加失败**
@@ -623,9 +623,9 @@ map.put(key1,value1);
 // 首先 会调用key1所在类的hashCode() 计算key1hash值 此hash值经过某种算法计算过后 得到在Entry数组中存放的位置
 // 如果此位置上的数据为空 此时的key1-value1 则会被添加到数组中
 // 如果此时的数据不为空 (意味着 此位置上存在一个或多个数据（以链表的形式存储） 表key1和以及存在的一个或者多个数据的hash值)：
-//	如果key1的hash值与已经存在的hash值不相同 则 key1-value1添加成功
+// 如果key1的hash值与已经存在的hash值不相同 则 key1-value1添加成功
 //  如果此时的key1的hash值与已经存在的hash值相同:
-//		则调用key1的equals方法 如果返回true 则使用value1 替代掉原来key1映射的元素
+//  则调用key1的equals方法 如果返回true 则使用value1 替代掉原来key1映射的元素
 //      如果返回的是false 则key1-value2添加成功
 
 // 如果一位数组上原有数据 则此时会以链表的形式存储数据
@@ -705,7 +705,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
                 // 如果存在 则替换 结束循环 不存在一直找到链表尾部
                 for (int binCount = 0; ; ++binCount) {
                     if ((e = p.next) == null) {
-                        // 	在链表尾部添加元素
+                        //  在链表尾部添加元素
                         p.next = newNode(hash, key, value, null);
                         if (binCount >= TREEIFY_THRESHOLD - 1) // -1 for 1st
                             treeifyBin(tab, hash);

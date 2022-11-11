@@ -80,7 +80,7 @@ float ===> Float
 double ===> Double
 boolean ===> Boolean
 **char ===> Character**
-![](assets/oeevgg/1640411587186-3d523c8e-78b9-46ec-9438-eb83a4927baf.jpeg)
+![](../../assets/java/oeevgg/1640411587186-3d523c8e-78b9-46ec-9438-eb83a4927baf.jpeg)
 
 ```java
 // 调用包装类的toString(形参)
