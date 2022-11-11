@@ -3,6 +3,38 @@ title: Hook
 url: https://www.yuque.com/u21419265/poi9nc/xkgu7o
 ---
 
+# useImperativeHandle
+
+可以让子组件暴露一些参数给父组件调用
+
+> 子组件:
+
+```typescript
+  useImperativeHandle(
+    formRefs,
+    () => ({
+      getData: () => {
+        return data;
+      },
+      clearFormData: () => {},
+    }),
+    [data, clearFormData],
+  );
+```
+
+> 父组件
+
+```typescript
+  const formsRef = useRef<{ getData: () => loginForm; clearFormData: (...args: any[]) => void }>(null);
+
+return <>
+  <LoginForm active={active} formRefs={formsRef} />
+  </>
+
+```
+
+## 参考资料
+
 函数式编程：
 useEffect 的distory在下一次的组件更新的时候调用 return函数
 useEffect的陷阱：
