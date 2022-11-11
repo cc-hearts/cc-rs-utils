@@ -3,7 +3,7 @@ title: nvm安装
 url: https://www.yuque.com/u21419265/dlfa41/xdtgf2
 ---
 
-<a name="wlox8"></a>
+
 
 # mac版本
 
@@ -57,7 +57,7 @@ export NVM_DIR="$HOME/.nvm"
 
 15,nvm root \[path] 设置和查看root路径
 
-16,nvm version 查看当前的版本 <a name="BX9wQ"></a>
+16,nvm version 查看当前的版本
 
 ## 解决nvm每次启动终端都要设置nvm use
 
@@ -69,7 +69,7 @@ Vscode安装quokka找不到node 在setting.json中指定
 "quokka.node":"/Users/xchen/.nvm/versions/node/v16.13.0/bin/node" // which node
 ```
 
-<a name="uBLpi"></a>
+
 
 # node yarn 查看全局安装的包
 
@@ -81,7 +81,7 @@ yarn global list --depth=0
 
 > nvm安装成功后 将nvm的全局的安装的包要配置环境变量 这样全局的命令才可以用
 
-<a name="bqacC"></a>
+
 
 # nvm 低版本不能安装问题
 

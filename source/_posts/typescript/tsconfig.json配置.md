@@ -12,7 +12,7 @@ tsconfig.json有以下顶层属性:
 - files
 - include
 - references
-- typeAcquisition <a name="k6yU3"></a>
+- typeAcquisition
 
 # 生成tsconfig.json
 
@@ -51,7 +51,7 @@ tsconfig.json有以下顶层属性:
     // "outFile": "./app.js", // es6 会报错 // 将多个相互依赖的文件生成一个文件，可以用在AMD模块中，即开启时应设置"module": "AMD",
     "sourceMap":true, // 是否映射文件  生成目标文件的sourceMap文件
      "preserveConstEnums": true, //希望使用 const enums 保留这种映射 保留 const 和 enum 声明
-    "strict": true, 
+    "strict": true,
     "alwaysStrict": true, // 在代码中注入'use strict'
     "strictNullChecks": true, // 不允许把null、undefined赋值给其他类型的变量
     "strictFunctionTypes": true, // 不允许函数参数双向协变
@@ -76,7 +76,7 @@ tsconfig.json有以下顶层属性:
     "node_modules",
   ],
   "files": [   //指定被编译的文件列表 只有需要编译的文件少时才会用到
-    "./src/index.ts"  
+    "./src/index.ts"
   ]
 }
 ```

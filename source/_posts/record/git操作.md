@@ -33,7 +33,7 @@ git config user.email 你的目标邮箱名;
 | vi ~/.gitconfig;   然后在文件中直接修改即可. |
 | --- |
 
-<a name="nqNEq"></a>
+
 
 # 创建一个分支
 
@@ -49,13 +49,13 @@ git branch -d 分支名 删除本地分支
 
 git remote -v 查看远程仓库地址
 
-**git fetch origin main (main为远程分支名字） 拉取远程分支** <a name="GNEbe"></a>
+**git fetch origin main (main为远程分支名字） 拉取远程分支**
 
 # 切换分支
 
 git checkout <切换的分支名>
 
-<a name="csmo0"></a>
+
 
 # 合并分支内容
 
@@ -66,7 +66,7 @@ git reset --hard HEAD
 代码已经提交，撤销的方法是
 git reset --hard ORIG\_HEAD
 
-<a name="Ocvrp"></a>
+
 
 # 记Git报错-refusing to merge unrelated histories
 
@@ -83,15 +83,15 @@ git merge <branch> --allow-unrelated-history // 该选项可以合并两个独�
 
 新建本地分支指定远程分支，该命令可以将远程git仓库里的指定分支拉取到本地
 git checkout -b 本地分支名 origin/远程分支名
- 
+
 //获取远程
 git fetch origin
- 
+
 //查看远程分支
 git branch -r
 //创建本地分支并关联
 git checkout -b 本地分支 origin/远程分支
- 
+
 //已有本地分支创建关联
 git branch --set-upstream-to origin/远程分支名  本地分支名
 //拉取
@@ -113,7 +113,7 @@ git remote add origin // 添加远程分支
 \-------
 git push origin 本地分支名:远程分支名
 
-<a name="EH2Ea"></a>
+
 
 ## 回滚
 

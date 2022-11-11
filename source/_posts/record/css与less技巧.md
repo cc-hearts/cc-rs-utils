@@ -4,18 +4,18 @@ url: https://www.yuque.com/u21419265/dlfa41/kqlleq
 ---
 
 父元素用display:flex 子元素可以使用margin:auto居中
-[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/yLzpqGb) <a name="mcWRk"></a>
+[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/yLzpqGb)
 
 # clip-path的使用技巧
 
-<a name="edi7C"></a>
+
 
 ## Inset
 
 inset( <shape-arg>{1,4} \[round <border-radius>]? )
 shape-arg 分别为矩形的上右下左顶点到被剪裁元素边缘的距离（和margin、padding参数类似），border-radius 为可选参数，用于定义 border 的圆角。
 
-<a name="ZWfw8"></a>
+
 
 ## circle
 
@@ -30,7 +30,7 @@ sqrt(width^2+height^2)/sqrt(2)
 
 DEMO:
 
-<a name="N1cK3"></a>
+
 
 ## Ellipse
 
@@ -38,7 +38,7 @@ ellipse() 用于定义一个椭圆。
 参数类型：ellipse( \[<shape-radius>{2}]? \[at <position>]? )
 其中 shape-radius 为椭圆x、y轴的半径，position 为椭圆中心的位置。
 
-<a name="VXjJs"></a>
+
 
 ## polygon
 
@@ -50,7 +50,7 @@ polygon() 用于定义一个多边形。
 其中 fill-rule 为填充规则，即通过一系列点去定义多边形的边界。
 [点击查看【codepen】](https://codepen.io/xiaochen2001/embed/porYVOv)
 svg暂时没学 不怎么会
-[svg cli-path](https://segmentfault.com/a/1190000023301221) <a name="A1j4I"></a>
+[svg cli-path](https://segmentfault.com/a/1190000023301221)
 
 # Grid布局
 
@@ -79,7 +79,7 @@ grid-template-rows: 100px 100px 100px;
   grid-template-rows: 33.33% 33.33% 33.33%;
 ```
 
-<a name="aSmGG"></a>
+
 
 ## repeat()
 
@@ -95,7 +95,7 @@ repeat()重复某种模式也是可以的。
 
 ![image.png]\(../../assets/record/kqlleq/1640703467691-904e7bc7-e60d-4a57-928c-eb7e2f194b44.png)
 
-<a name="RrFHK"></a>
+
 
 ## auto-fill 关键字
 
@@ -104,7 +104,7 @@ repeat()重复某种模式也是可以的。
 
 > 为什么对 grid-template-rows指定一列 后续列无效
 
-[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/YzrYdRw) <a name="Tiojl"></a>
+[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/YzrYdRw)
 
 ## fr关键字
 
@@ -120,11 +120,11 @@ repeat()重复某种模式也是可以的。
 }
 ```
 
-<a name="Va9jV"></a>
+
 
 ## minmax()
 
-minmax()函数产生一个长度范围，表示长度就在这个范围之中。它接受两个参数，分别为最小值和最大值。 <a name="BwCNS"></a>
+minmax()函数产生一个长度范围，表示长度就在这个范围之中。它接受两个参数，分别为最小值和最大值。
 
 ## auto
 
@@ -132,11 +132,11 @@ auto关键字表示由浏览器自己决定长度。
 
 > 第二列的宽度，基本上等于该列单元格的最大宽度，除非单元格内容设置了min-width，且这个值大于最大宽度。
 
-![image.png]\(../../assets/record/kqlleq/1640705240141-3fd4d0a6-afca-4a60-8823-c4c5f4367d7a.png) <a name="cmPzy"></a>
+![image.png]\(../../assets/record/kqlleq/1640705240141-3fd4d0a6-afca-4a60-8823-c4c5f4367d7a.png)
 
 ## gap
 
-<a name="MHVO0"></a>
+
 
 ### row-gap 属性，&#xA;column-gap 属性，&#xA;gap 属性
 
@@ -154,11 +154,11 @@ gap: 20px 20px;
 
 ![image.png]\(../../assets/record/kqlleq/1640705631159-133e0a23-702a-42b2-9326-468327201d0d.png)
 
-<a name="gARQ1"></a>
+
 
 ## grid-template-areas
 
-指定区域 <a name="pmb6l"></a>
+指定区域
 
 ## grid-auto-flow 属性
 
@@ -172,11 +172,11 @@ grid-auto-flow属性决定，默认值是row，即"先行后列"。也可以将�
 ![image.png]\(../../assets/record/kqlleq/1640707578263-eb33fc15-963e-405e-801d-42ba376a57aa.png)
 此时的单元格是被空出来的
 使用column dense 可以尽可能填充空格
-![image.png]\(../../assets/record/kqlleq/1640707623862-363ceecb-d80e-47dd-8744-28e2becfd482.png) <a name="Berpk"></a>
+![image.png]\(../../assets/record/kqlleq/1640707623862-363ceecb-d80e-47dd-8744-28e2becfd482.png)
 
 ## 单元格内容属性
 
-<a name="knpbp"></a>
+
 
 ### justify-items 属性，&#xA;align-items 属性，&#xA;place-items 属性
 
@@ -208,7 +208,7 @@ place-items: <align-items> <justify-items>;
 
 如果省略第二个值，则浏览器认为与第一个值相等。
 
-<a name="HAPNa"></a>
+
 
 ### justify-content 属性，&#xA;align-content 属性，&#xA;place-content 属性
 
@@ -232,7 +232,7 @@ space-evenly - 项目与项目的间隔相等，项目与容器边框之间也�
  place-content: <align-content> <justify-content>
 ```
 
-<a name="JWHZx"></a>
+
 
 ### grid-auto-columns 属性，&#xA;grid-auto-rows 属性
 
@@ -240,14 +240,14 @@ space-evenly - 项目与项目的间隔相等，项目与容器边框之间也�
 grid-auto-columns属性和grid-auto-rows属性用来设置，浏览器自动创建的多余网格的列宽和行高。它们的写法与grid-template-columns和grid-template-rows完全相同。如果不指定这两个属性，浏览器完全根据单元格内容的大小，决定新增网格的列宽和行高。
 [点击查看【codepen】](https://codepen.io/xiaochen2001/embed/eYGyXNz)
 
-<a name="drZMs"></a>
+
 
 ### grid-template 属性，&#xA;grid 属性
 
 grid-template属性是grid-template-columns、grid-template-rows和grid-template-areas这三个属性的合并简写形式。
 grid属性是grid-template-rows、grid-template-columns、grid-template-areas、 grid-auto-rows、grid-auto-columns、grid-auto-flow这六个属性的合并简写形式
 
-<a name="lPmeH"></a>
+
 
 ### grid-column-start 属性，&#xA;grid-column-end 属性，&#xA;grid-row-start 属性，&#xA;grid-row-end 属性
 
@@ -275,7 +275,7 @@ grid-row-end属性：下边框所在的水平网格线
 ![image.png]\(../../assets/record/kqlleq/1640709960646-7b327e40-560f-4f13-b4d1-5900d47f6455.png)
 使用这四个属性，如果产生了项目的重叠，则使用z-index属性指定项目的重叠顺序。
 
-<a name="VHvET"></a>
+
 
 ### grid-column 属性，&#xA;grid-row 属性
 
@@ -293,7 +293,7 @@ grid-column属性是grid-column-start和grid-column-end的合并简写形式，g
 }
 ```
 
-<a name="xVY5r"></a>
+
 
 ## grid-area 属性
 
@@ -317,7 +317,7 @@ grid-area属性还可用作grid-row-start、grid-column-start、grid-row-end、g
 }
 ```
 
-<a name="Sv8oL"></a>
+
 
 ### justify-self 属性，&#xA;align-self 属性，&#xA;place-self 属性
 
@@ -341,11 +341,11 @@ place-self属性是align-self属性和justify-self属性的合并简写形式。
 place-self: <align-self> <justify-self>;
 ```
 
-<https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html> <a name="p82Nx"></a>
+<https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html>
 
 ## grid瀑布流写法
 
-[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/gOGvYax?editors=1100) <a name="rJhnn"></a>
+[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/gOGvYax?editors=1100)
 
 # less技巧
 
@@ -384,7 +384,7 @@ place-self: <align-self> <justify-self>;
 }
 ```
 
-<a name="ucZRj"></a>
+
 
 # flex瀑布流写法
 
@@ -392,16 +392,16 @@ place-self: <align-self> <justify-self>;
 
 > less文档
 
-<a name="nRoIS"></a>
+
 
 # :not()
 
-[CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS) [伪类](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) **:not()** 用来匹配不符合一组选择器的元素。由于它的作用是防止特定的元素被选中，它也被称为\_反选伪类\_（*negation pseudo-class*） <a name="dUQzQ"></a>
+[CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS) [伪类](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) **:not()** 用来匹配不符合一组选择器的元素。由于它的作用是防止特定的元素被选中，它也被称为\_反选伪类\_（*negation pseudo-class*）
 
 # gradients
 
 线性渐变（Linear Gradients）- 向下/向上/向左/向右/对角方向。
-径向渐变（Radial Gradients）- 由它们的中心向四周发散。 <a name="kaiWh"></a>
+径向渐变（Radial Gradients）- 由它们的中心向四周发散。
 
 ## 线性渐变
 
@@ -414,17 +414,17 @@ place-self: <align-self> <justify-self>;
 **to left 从右到左**
 **to right 从左到右**
 // 对角渐变
-[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/wvrjGmr) <a name="g4Qs8"></a>
+[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/wvrjGmr)
 
 ## 角度渐变
 
 > 从顶部开始 沿顺时针
 
-[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/MWEGyPz) <a name="HeXQD"></a>
+[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/MWEGyPz)
 
 ## 重复的线性渐变
 
-[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/MWEGyPz) <a name="CRbiz"></a>
+[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/MWEGyPz)
 
 ## 颜色终止位置
 
@@ -438,7 +438,7 @@ place-self: <align-self> <justify-self>;
 }
 ```
 
-[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/RwLyQaN) <a name="TqDox"></a>
+[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/RwLyQaN)
 
 ## 渐变中心点
 
@@ -446,11 +446,11 @@ place-self: <align-self> <justify-self>;
 
 > 10% 就是渐变的中心点 默认值是50%
 
-[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/PoJeQOb) <a name="Cu26f"></a>
+[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/PoJeQOb)
 
 ## 堆叠渐变
 
-[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/dyVedjo) <a name="aFl3s"></a>
+[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/dyVedjo)
 
 # radial-gradient径向渐变
 

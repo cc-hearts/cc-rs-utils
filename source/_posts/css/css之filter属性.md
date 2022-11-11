@@ -5,7 +5,7 @@ url: https://www.yuque.com/u21419265/rceu41/hu7kk3
 
 > filter: none 无任何效果
 
-<a name="yiiLY"></a>
+
 
 # filter:blur(px) 高斯模糊
 
@@ -37,13 +37,13 @@ url: https://www.yuque.com/u21419265/rceu41/hu7kk3
   <div id="blur"></div>
 ```
 
-<a name="W3b1L"></a>
+
 
 # filter:brightness(%) 线性乘法
 
 > 可以让图片看起来更亮或者更暗 百分比越小越暗
 
-<a name="H6bYC"></a>
+
 
 # contrast(%) 对比度
 
@@ -75,7 +75,7 @@ url: https://www.yuque.com/u21419265/rceu41/hu7kk3
 }
 ```
 
-<a name="dDdH8"></a>
+
 
 # hue-rotate(deg) 色相旋转
 
@@ -111,7 +111,7 @@ url: https://www.yuque.com/u21419265/rceu41/hu7kk3
 }
 ```
 
-[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/RwLYPaE) <a name="Io2Fp"></a>
+[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/RwLYPaE)
 
 # invert(%) 反转
 
@@ -133,7 +133,7 @@ url: https://www.yuque.com/u21419265/rceu41/hu7kk3
 }
 ```
 
-<a name="jtGGQ"></a>
+
 
 # grayscale(%) 将图像转换为灰度图像
 
@@ -153,16 +153,16 @@ url: https://www.yuque.com/u21419265/rceu41/hu7kk3
 > 还有一种用法是有的时候需要将全站变成灰色
 
 ```less
-*{    
-filter: grayscale(100%);   
--webkit-filter: grayscale(100%);   
--moz-filter: grayscale(100%);    
--ms-filter: grayscale(100%);   
+*{
+filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
 -o-filter: grayscale(100%);
 }
 ```
 
-<a name="hYLxB"></a>
+
 
 # sepia(%) 将图像转换为深褐色
 
@@ -178,19 +178,19 @@ filter: grayscale(100%);
 ```
 
 sepia grayscale invert 的codeopn：
-[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/jOwvNQx?editors=0100) <a name="BTuIp"></a>
+[点击查看【codepen】](https://codepen.io/xiaochen2001/embed/jOwvNQx?editors=0100)
 
 #
 
-<a name="PqIE6"></a>
+
 
 # 复合函数
 
 ```less
-filter: contrast(175%) brightness(3%)	
+filter: contrast(175%) brightness(3%)
 ```
 
-<a name="P5ayl"></a>
+
 
 # 重点:filter:url()
 
