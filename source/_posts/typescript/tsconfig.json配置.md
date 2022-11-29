@@ -5,7 +5,7 @@ categories: Typescript
 
 tsconfig.json有以下顶层属性:
 
-- compileOnSave
+- compileOnSave - 在保存的时候是否需要自动触发编译
 - compilerOptions
 - exclude
 - extends
@@ -236,3 +236,48 @@ tsconfig.json有以下顶层属性:
   "files": ["./src/index.ts"]                            /* 指定被编译的文件列表 只有需要编译的文件少时才会用到*/
 }
 ```
+
+## tslib 
+如果开启了tslib选项 则一些降级的操作会从`tslib` 中引入
+> 例如： 如果开启了`target` 为 `es5` 但是使用了`es6`的语法 并且开启了`importedHelper` 就会从`tslib` 导入依赖进行降级处理
+
+## exclude
+exclude 字段中的声明只对 include 字段有排除效果，对 files 字段无影响，即与 include 字段中的值互斥。
+> 如果 tsconfig.json 文件中 files 和 include 字段都不存在，则默认包含 tsconfig.json 文件所在目录及子目录的所有文件，且排除在 exclude 字段中声明的文件或文件夹。
+
+## baseUrl & paths
+
+baseUrl：设置基本目录以解析非绝对模块名称(定义一个根目录，以此进行绝对文件路径解析)
+
+paths：用于设置模块名或路径映射列表，这样就可以简写项目中自定义模块的文件路径。
+```js
+{ 
+  "compilerOptions": { 
+    // 注意：baseUrl 必选，与 paths 成对出现，以 tsconfig.json 文件所在目录开始 
+    "baseUrl": ".",  
+    "paths": { 
+      // 映射列表 
+      "@/*": [ 
+        "src/*" 
+      ], 
+      "moduleA": [ 
+        "src/libs/moduleA" 
+      ] 
+    } 
+  } 
+} 
+ 
+// 代码里这么写 
+import Toast from '@/components/Toast.ts' // 模块实际位置: src/components/Toast.ts 
+import TestModule from 'moduleA/index.js' // 模块实际位置: src/libs/moduleA/index.js 
+
+```
+
+## noEmit
+noEmit 设置是否输出 js 文件
+
+## 参考资料
+- https://www.tslang.cn/docs/handbook/compiler-options.html
+- https://www.typescriptlang.org/tsconfig/#compilerOptions
+
+- [会写 TypeScript 但你真的会 TS 编译配置吗？](https://www.51cto.com/article/694463.html?u_atoken=dac20e63-0d87-4411-8ac8-22780345ec5e&u_asession=01n8G9vloyDUq7LekNwXRyfeg78SLmCJBsWIbjo4bfyzPCDpgekz7DXCu9GnceiBULX0KNBwm7Lovlpxjd_P_q4JsKWYrT3W_NKPr8w6oU7K-AjyiUCpLGLVDgyBtSmx3D-eS9_bVFQDGVlnkFZYH7PGBkFo3NEHBv0PZUm6pbxQU&u_asig=05-yycY1lxRkIXA0qDjEOiQiwt4rD7uREwYzAkQZb3NhnJlo27HRiepQuY7Qpg92cTCvvJ6EdKBoncWukeJtn4Bf34U8hDN9OEAOltQyB-n3sIPVXU0F85nyNe9qPXlYyQU5uM0sjLwqpF_99Er452NjcaqpW9sZzpl3wjV2uM1CL9JS7q8ZD7Xtz2Ly-b0kmuyAKRFSVJkkdwVUnyHAIJzWpLzL1DmsS6XtYE-NkzPtudo1K-WjlZHRWPMgdX55in0y_4-Ib35wOiAv7-4XJ12O3h9VXwMyh6PgyDIVSG1W-WMxZ4yWlvFmh26bhx7IDPiC5haaDpMo85GGl7nYBJOcqEkdemwGUVWOZk7Ef24s0wJLSLe_hpuSo_oVtt_dFnmWspDxyAEEo4kbsryBKb9Q&u_aref=EHMQOi974ExRxp9LJr7uaqD%2FwbY%3D)

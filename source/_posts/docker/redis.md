@@ -51,3 +51,12 @@ redis-server /ect/redis/redis.conf
 ```
 
 修改之后需要重新启动服务
+
+## exec后的shell 测试
+```shell
+$ redis-cli
+
+$ auth "password"
+
+select 3
+```

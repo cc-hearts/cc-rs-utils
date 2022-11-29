@@ -20,3 +20,9 @@ categories: Mac
    /usr/local/bin/code
   done
 ```
+## 清除启动台无效图标
+```shell
+defaults write com.apple.dock ResetLaunchPad -bool true
+
+killall Dock
+```

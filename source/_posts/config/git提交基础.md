@@ -57,3 +57,13 @@ git add .
 git commit -m 'new message'
 ```
 
+## git中断合并
+
+```shell
+git merge --abort # 在合并的时候，出现了冲突，但是还没有解决冲突，没有进行提交的时候，放弃合并
+```
+
+> 如果已经 commit：
+>
+> - git revert -m 1 HEAD 新建一个commit，并且回到合并之前的状态
+> - git reset --hard commit_id 回退到指定的commit节点

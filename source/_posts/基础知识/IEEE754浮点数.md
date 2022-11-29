@@ -1,15 +1,11 @@
 ---
 title: IEEE754 浮点数
-categories: basic
+categories: Basic
 ---
-
-
 
 ## 参考资料
 
-
-
-- http://c.biancheng.net/view/314.html
+- <http://c.biancheng.net/view/314.html>
 
 - [进制转换工具](https://tool.oschina.net/hexconvert/)
 
