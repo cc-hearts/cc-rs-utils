@@ -143,3 +143,21 @@ process.stdin.on('end', () => {
 
 // e6 88 91 我
 ```
+### 监听`data`
+```ts
+process.stdin.on("data", (data) => {
+  const ans = data.toString();
+  if (ans === "end\n") {
+    // 使用exit可以退出
+    process.exit(0);
+  }
+});
+```
+
+### 监听`readable`
+```ts
+process.stdin.on("readable", () => {
+  const ans = process.stdin.read();
+  console.log("ans", ans.toString());
+});
+```

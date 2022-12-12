@@ -28,3 +28,8 @@ repo:
 
 之后的包的`package.json` 中的名字为`@packages/vue2`
 则可以使用 `pnpm add axios --filter @packages/vue2` 去安装依赖。
+
+## 安装深层依赖
+```pnpm
+pnpm config set auto-install-peers true
+```
