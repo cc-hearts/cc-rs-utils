@@ -1,6 +1,6 @@
-# rs-utils
+# cc-rs-utils
 
-`rs-utils` is a Rust library that provides commonly used utility functions and tools. It aims to simplify common programming tasks and improve productivity by offering a set of reusable utilities.
+`cc-rs-utils` is a Rust library that provides commonly used utility functions and tools. It aims to simplify common programming tasks and improve productivity by offering a set of reusable utilities.
 
 
 ## License
