@@ -1,4 +1,3 @@
-
 /// Splits `input_str` by `delimiter`, returning the resulting slices.
 ///
 /// The returned slices borrow from `input_str`, so the caller must keep the
@@ -38,14 +37,13 @@ pub fn un_capitalize(input_str: &str) -> String {
     result
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
     fn test_split_string() {
-        let result = split_string("this is collect",' ');
+        let result = split_string("this is collect", ' ');
         assert_eq!(result, vec!["this", "is", "collect"]);
     }
 
