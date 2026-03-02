@@ -1,72 +1,41 @@
 
-/// Splits a string
+/// Splits `input_str` by `delimiter`, returning the resulting slices.
 ///
-/// This function takes a string and a delimiter as arguments, and then splits the string using the delimiter.
-///
-/// # Arguments
-///
-/// * `input_str` - The string to be split
-/// * `delimiter` - The character to use as a delimiter for splitting the string
-///
-/// # Returns
-///
-/// Returns a vector of the split substrings
-///
-/// # Example
-///
-/// ```
-/// use cc_rs_utils::string::split_string;
-/// let v = split_string("Hello, World!", ',');
-/// assert_eq!(v, vec!["Hello", " World!"]);
-/// ```
+/// The returned slices borrow from `input_str`, so the caller must keep the
+/// source string alive. Consecutive delimiters or leading/trailing delimiters
+/// generate empty entries, matching `str::split` semantics.
 pub fn split_string(input_str: &str, delimiter: char) -> Vec<&str> {
     input_str.split(delimiter).collect()
 }
 
-/// Capitalizes a string
+/// Capitalizes the first character of `input_str` and returns the owned result.
 ///
-/// This function takes a string as an argument, capitalizes the first character of the string, and returns the modified string.
-///
-/// # Arguments
-///
-/// * `input_str` - The string to be capitalized
-///
-/// # Returns
-///
-/// Returns the string with the first character capitalized
-///
-/// # Example
-///
-/// ```
-/// use cc_rs_utils::string::capitalize;
-/// let s = capitalize("hello");
-/// assert_eq!(s, "Hello");
-/// ```
+/// Empty strings return an empty `String`, and the remainder of the input is
+/// appended unchanged. Multi-byte characters are handled through `char::to_uppercase`.
 pub fn capitalize(input_str: &str) -> String {
-    format!("{}{}", &input_str[0..1].to_uppercase(), &input_str[1..])
+    let mut chars = input_str.chars();
+    let first = match chars.next() {
+        Some(ch) => ch,
+        None => return String::new(),
+    };
+    let mut result = first.to_uppercase().collect::<String>();
+    result.push_str(chars.as_str());
+    result
 }
 
-/// Uncapitalizes a string
+/// Lowercases the first character of `input_str` and returns the owned result.
 ///
-/// This function takes a string as an argument, converts the first character of the string to lowercase, and returns the modified string.
-///
-/// # Arguments
-///
-/// * `input_str` - The string to be uncapitalized
-///
-/// # Returns
-///
-/// Returns the string with the first character converted to lowercase
-///
-/// # Example
-///
-/// ```
-/// use cc_rs_utils::string::un_capitalize;
-/// let s = un_capitalize("Hello");
-/// assert_eq!(s, "hello");
-/// ```
+/// Empty strings return an empty `String`, and the remainder is left untouched so
+/// multi-byte characters are handled consistently with `capitalize`.
 pub fn un_capitalize(input_str: &str) -> String {
-    format!("{}{}",&input_str[0..1].to_lowercase(), &input_str[1..])
+    let mut chars = input_str.chars();
+    let first = match chars.next() {
+        Some(ch) => ch,
+        None => return String::new(),
+    };
+    let mut result = first.to_lowercase().collect::<String>();
+    result.push_str(chars.as_str());
+    result
 }
 
 
@@ -90,5 +59,15 @@ mod tests {
     fn test_un_capitalize() {
         let result = un_capitalize("This is apple.");
         assert_eq!(result, "this is apple.")
+    }
+
+    #[test]
+    fn capitalize_empty_returns_empty() {
+        assert!(capitalize("").is_empty());
+    }
+
+    #[test]
+    fn un_capitalize_empty_returns_empty() {
+        assert!(un_capitalize("").is_empty());
     }
 }
